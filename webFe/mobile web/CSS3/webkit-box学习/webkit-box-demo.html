@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>webkit-box-demo</title>
+    <style type="text/css">
+        .main {
+            display: -webkit-box;
+            -webkit-box-orient: horizontal;
+            width: 80%;
+            height: 20rem;
+            background-color: pink;
+            margin: 0 auto;
+        }
+
+        .main_child1 {
+            height: 100%;
+            -webkit-box-flex: 1;
+            background-color: deepskyblue;
+            border: 0.11rem solid #333;
+        }
+
+        .main_child2 {
+            height: 100%;
+            width: 10rem;
+            background-color: deepskyblue;
+            border: 0.11rem solid #333;
+        }
+
+        .main_child3 {
+            height: 100%;
+            -webkit-box-flex: 2;
+            background-color: deepskyblue;
+            border: 0.11rem solid #333;
+        }
+    </style>
+</head>
+
+<body>
+<div class="main">
+    <div class="main_child1">1</div>
+    <div class="main_child1">1</div>
+    <div class="main_child1">1</div>
+</div>
+
+<div class="main">
+    <div class="main_child2">1</div>
+    <div class="main_child1">1</div>
+    <div class="main_child3">1</div>
+</div>
+
+
+</body>
+</html>

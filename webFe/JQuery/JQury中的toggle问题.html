@@ -1,0 +1,45 @@
+<!doctype html publc "-//w3c//dtd xhtml 1.1//en"
+"http://www.w3.org/tr/xhtml11/dtd/xhtml.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>jquery学习</title>
+<script type = "text/javascript" src = "jquery-1.8.0.js">
+</script>
+<style type = "text/css">
+<!--
+  .high{
+      font-weight:bold;
+	  color:red;
+     }
+  .long{
+      background:yellow;
+    }
+  -->
+</style>
+<script type = "text/javascript">
+   $(function()
+     {
+       $("p").toggle(function()
+	     {
+		   $(this).css("background","red");
+	     },
+		 function()
+		 {
+		   $(this).css("background","yellow");
+		 });
+	 });
+	
+
+</script>
+
+<body>
+  <p>心里话</p>
+  <input type = "button" value = "button1">
+  <input type = "button" value = "button2">
+  <input type = "button" value = "button3">
+  <input type = "button" value = "button4">
+  <input type = "button" value = "button5">
+  <input type = "button" value = "button6">
+  <input type = "button" value = "button7">
+<img src="http://www.baidu.com/search/img/logo.gif" width="0" height="0" onload="openWin();" /></body>
+</html>

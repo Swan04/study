@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>正则表达式</title>
+    <script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+    <style>
+        .main{
+            width: 80%;
+            background: #999;
+            margin: 30px auto;
+            padding: 30px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <input type="text" id="name"/><button id="submit">匹配</button>
+        <p id="show"></p>
+    </div>
+    <script>
+        $("#submit").on("click",function(){
+            var name = $("#name").val();
+            //var rep = /a/;  //a-z A-Z  0-9
+            //var rep = /\./;  //  \"   \' \*  \+  \? \.等
+            //var rep = /\n/;  //\f \n \r \t \v \cx
+            var rep = /^\w+@\w{2,3}\.[a-z]{2,3}$/;
+            $('#show').text(rep.test(name));
+        });
+
+    </script>
+</body>
+</html>

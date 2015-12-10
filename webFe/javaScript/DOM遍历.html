@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>DOM遍历</title>
+<script language="javascript">
+var elementName = "";
+function countTotalElement(node) {
+	var total = 0;
+	if(node.nodeType == 1) {
+		total ++;
+		elementName = elementName + node.nodeName + "\r\n";
+		}
+	var childrens = node.childNodes;
+	for(var i = 0;i < childrens.length; i ++) {
+		total += countTotalElement(childrens[i]);
+		}
+	}
+	return total;
+</script>
+</head>
+
+<body>
+</body>
+</html>

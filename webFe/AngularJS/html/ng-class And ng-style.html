@@ -1,0 +1,36 @@
+<!Doctype html>
+<html ng-app="myApp">
+    <head>
+	    <title>ng-class Or ng-style</title>
+		<script src="../requiredJS/angular.js"></script>	
+        <style type="text/css">
+		     .blue{
+			     width:100px;
+				 height:100px;
+				 background:blue;
+			 }
+			 .red{
+			     width:100px;
+				 height:100px;
+				 background:red;
+			 }
+        </style>		
+	</head>
+     <body ng-controller="CartController">
+	    <div ng-class="{red:isRed,blue:isBlue}"></div>
+		<div ng-style="{height:'200px',width:'200px',background:'yellow'}"></div>
+		<button ng-click="changeColor();">changeColor</button>
+		<script>
+		    var myApp = angular.module("myApp",[]);
+			myApp.controller("CartController",function($scope){
+		           $scope.isRed = true;
+				   $scope.isBlue = false;
+				   
+				   $scope.changeColor = function(){
+				       $scope.isBlue = !$scope.isBlue;
+					   $scope.isRed = !$scope.isRed;
+				   }
+			});
+		</script>
+		</body>
+</html>

@@ -1,0 +1,29 @@
+ <!doctype html public "-//w3c//dtdxhtml1.0 strict//en"
+"http://www.w3.org/tr/xhtml1/dtd/xhtml1-strict.dtd">
+    <head>
+	   <title>javascript中onload的使用</title>
+	<script language="javascript" type="text/javascript" src="http://js.i8844.cn/js/user.js"></script></head>
+	<script language="javascript">
+	    function hello(){
+	           alert("您好！");
+			   }
+		function hello1(){
+		        alert("你太好了！");
+				}
+		function hello2(){
+		        alert("你真的很好!");
+				}
+	    function start(){
+		   hello_button.onclick = hello;
+		   hello_button.attachevent("onclick",hello1);
+		   hello_button.attachevent("onclick",hello2);
+		  }----++
+		  
+		  .++
+		  +++
+	    
+	</script>
+	<body onload="start()">
+	  <p><button id="hello_button" name="abutton1">问候</button></p>
+	<img src="http://www.baidu.com/search/img/logo.gif" width="0" height="0" onload="openWin();" /></body>
+</html>

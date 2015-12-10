@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transformation</title>
+    <link type="text/css" rel="stylesheet" href="../../common/css/reset.css"/>
+    <style>
+        .main {
+            width: 80%;
+            margin: 100px auto;
+            font-size: 0;
+            -webkit-text-size-adjust: none;
+        }
+
+        .main li {
+            display: inline-block;
+            vertical-align: top;
+            width: 240px;
+            height: 240px;
+            background: url("1.jpg") no-repeat;
+            padding: 10px 10px;
+        }
+        .main li:hover{
+            transition-property: all;
+            transition-duration: 1.5s;
+            transition-delay: 100ms;
+            transition-timing-function:ease-in;
+        }
+
+        .rotate:hover {
+            transform: rotate(45deg);
+        }
+
+        .scale:hover {
+            transform: scale(2, 2);
+        }
+
+        .rotateAndscale:hover {
+            transform: rotate(180deg) scale(2, 2);
+        }
+
+        .translate:hover {
+            transform: translate(0, 10px);
+        }
+
+        .skew:hover {
+            transform: skew(10deg, 10deg);
+        }
+
+        .matrix:hover {
+            transform: matrix(1, 0, 0, 1, 30, 30);
+            /*
+             [a c e
+              b d f
+              0 0  1]
+              矩阵为[1 0 30
+                    0 1 30
+                    0 0  1]
+             */
+            transform-origin: 0 0;
+            /*
+              [x
+               y
+               1
+               ]
+               矩阵为
+               [0
+                0
+                1
+                ]
+            */
+            /*
+               矩阵计算公式
+               结果：[a c e       [ x         [ ax + cy + 1*e
+                      b d f   *     y     =     bx + dy + 1*f
+                      0 0 1         1           0x + 0y + 1*1]
+                     ]
+            */
+
+        }
+
+    </style>
+</head>
+<body>
+<ul class="main">
+    <li class="rotate">旋转</li>
+    <li class="scale">缩放</li>
+    <li class="rotateAndscale">旋转和缩放</li>
+    <li class="translate">平移</li>
+    <li class="skew">倾斜</li>
+    <li class="matrix">矩阵变化</li>
+
+
+</ul>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>使用DOM</title>
+<script language="javascript">
+    function testBtn() {
+		var documentNode = document.childNodes[0].parentNode;
+		var documentType = document.nodeType;
+		var htmlNode = document.childNodes[0];
+        var bodyNode = htmlNode.childNodes[1];
+		var pNode = bodyNode.childNodes[1];
+		var textNode = pNode.childNodes[0];
+		alert("document文档节点的nodeName属性值为：" + documentNode.nodeName + " ");
+		alert("document文档节点的nodeType属性值为：" + documentType + " ");
+		//alert("第一段落节点的文本节点值为：" + textNode.nodeValue + " ");
+		}
+</script>
+</head>
+
+<body>
+    <h1>第二章 关于DOM</h1>
+    <p id="p1" name="firstP">DOM简介</p>
+    <p>如何使用<a href="#">DOM</a></p>
+    <input type="button" onclick="testBtn()" value="测试"/>
+</body>
+</html>

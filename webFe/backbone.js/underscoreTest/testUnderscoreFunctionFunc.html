@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>testUnderScore</title>
+</head>
+<body>
+     <script type="text/javascript" src="underscore.js"></script>
+    <script>
+           var MYARRAY = [2,3,3,1,4,1,3,1,[9],false];
+           var MYARRAYNEW = [4,5,7,6];
+           var MYOBJ = {
+                        id:1,
+                        name:"ZS",
+                        MYFUNC:function(param){
+                          console.log(param + ":" + this.name);
+                        },
+                        MYFUNCNEW:function(){
+                          console.log(this.id);
+                        }
+                       };
+
+           var MYFUNC = function(param){
+                console.log(param + ":" + this.name);
+           }
+
+           var MYFUNCNEW = function(){
+                console.log(this.id);
+           }
+
+           //绑定函数 function 到对象 object 上, 也就是无论何时调用函数, 函数里的 this 都指向这个 object. 任意可选参数 arguments 可以传递给函数 function , 可以填充函数所需要的参数, 这也被称为 partial application。
+           var bindFunc = _.bind(MYFUNC,MYOBJ,"bind");
+           bindFunc();
+
+           //把methodNames参数指定的一些方法绑定到object上，这些方法就会在对象的上下文环境中执行。绑定函数用作事件处理函数时非常便利，否则函数被调用时this一点用也没有。methodNames参数是必须的。
+           _.bindAll(MYOBJ,"MYFUNC","MYFUNCNEW");
+           MYOBJ.MYFUNCNEW();
+
+           //局部应用一个函数填充在任意个数的 参数，不改变其动态this值。和bind方法很相近。你可以在你的参数列表中传递_来指定一个参数 ，不应该被预先填充，
+           var partialFunc = _.partial(MYFUNC,"love");
+           partialFunc();
+          
+          //Memoizes方法可以缓存某函数的计算结果。对于耗时较长的计算是很有帮助的。如果传递了 hashFunction 参数，就用 hashFunction 的返回值作为key存储函数的计算结果。 hashFunction 默认使用function的第一个参数作为key。
+          var fibonacci = _.memoize(function(n) {
+            return n < 2 ? n: fibonacci(n - 1) + fibonacci(n - 2);
+          });
+          console.log("fibonacci:" + fibonacci(30));
+
+          //类似setTimeout，等待wait毫秒后调用function。如果传递可选的参数arguments，当函数function执行时， arguments 会作为参数传入。
+          _.delay(MYOBJ.MYFUNCNEW,2000);
+
+          //延迟调用function直到当前调用栈清空为止，类似使用延时为0的setTimeout方法。对于执行开销大的计算和无阻塞UI线程的HTML渲染时候非常有用。 如果传递arguments参数，当函数function执行时， arguments 会作为参数传入。
+          _.defer(function(){
+            console.log("defer");
+          });
+
+          //创建并返回一个像节流阀一样的函数，当重复调用函数的时候，最多每隔 wait毫秒调用一次该函数。对于想控制一些触发频率较高的事件有帮助。
+          var throttle = _.throttle(function(){
+             console.log("throttle");
+          },100);
+          throttle();
+
+          //返回 function 函数的防反跳版本, 将延迟函数的执行(真正的执行)在函数最后一次调用时刻的 wait 毫秒之后. 对于必须在一些输入（多是一些用户操作）停止到达之后执行的行为有帮助。 例如: 渲染一个Markdown格式的评论预览, 当窗口停止改变大小之后重新计算布局, 等等.
+          var lazyLayout = _.debounce(function(){
+            console.log("debounce");
+          }, 300);
+          lazyLayout();
+
+          //创建一个只能调用一次的函数。重复调用改进的方法也没有效果，只会返回第一次执行时的结果。 作为初始化函数使用时非常有用, 不用再设一个boolean值来检查是否已经初始化完成.
+          var once = _.once(function(){
+              console.log("once")
+          });
+          once();
+          once();
+
+          //创建一个函数, 只有在运行了 count 次之后才有效果. 在处理同组异步请求返回结果时, 如果你要确保同组里所有异步请求完成之后才 执行这个函数, 这将非常有用。
+          var afterFunc = _.after(2,function(){
+              console.log("afterFunc");
+          });
+          afterFunc();  
+          afterFunc();  
+          afterFunc();  
+          
+          //创建一个函数,调用不超过count 次。 当count已经达到时，最后一个函数调用的结果 是被记住并返回 。
+          var beforeFunc = _.before(2,function(){
+            console.log("beforeFunc");
+          });
+          beforeFunc();
+          beforeFunc();
+          beforeFunc();
+          beforeFunc();
+
+          //将第一个函数 function 封装到函数 wrapper 里面, 并把函数 function 作为第一个参数传给 wrapper. 这样可以让 wrapper 在 function 运行之前和之后 执行代码, 调整参数然后附有条件地执行.
+          var hello = function(name) { return "hello: " + name; };
+          hello = _.wrap(hello, function(func) {
+               console.log("before, " + func("moe") + ", after");
+          });
+          hello();
+    </script>
+
+</body>
+</html>

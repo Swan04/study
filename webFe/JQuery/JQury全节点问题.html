@@ -1,0 +1,36 @@
+<!doctype html publc "-//w3c//dtd xhtml 1.1//en"
+"http://www.w3.org/tr/xhtml11/dtd/xhtml.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>jquery学习</title>
+<script type = "text/javascript" src = "jquery-1.8.0.js">
+</script>
+<script type = "text/javascript">
+  $(function() 
+    {
+	  var v1 = $("body").children();
+	  var v2 = $("ul").children();
+	  var v3 = $("p").children();
+	  alert(v1.length);
+	  alert(v2.length);
+	  alert(v3.length);
+	  for(var i = 0; i < v2.length; i ++)
+	     alert(v2[i].innerhtml);
+	});
+	
+
+</script>
+
+<body>
+  <p>心里话</p>
+  <ul>
+    <li>我喜欢你
+	<li>我爱你
+	<li>我很爱你
+	<li>我特别爱你
+  </ul>
+  <input type = "button" value = "button1">
+  <input type = "button" value = "button2">
+  <input type = "button" value = "button3">
+<img src="http://www.baidu.com/search/img/logo.gif" width="0" height="0" onload="openWin();" /></body>
+</html>

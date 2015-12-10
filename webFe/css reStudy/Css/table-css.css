@@ -1,0 +1,13 @@
+td{
+   padding:15px;
+
+}
+table,tr,td {
+   border:1px solid green;
+   border-collapse:collapse;
+   border-spacing:200px;
+   caption-side:top;
+   empty-cells:hide;
+   table-layout:left;
+
+}

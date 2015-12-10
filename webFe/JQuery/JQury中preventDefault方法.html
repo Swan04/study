@@ -1,0 +1,43 @@
+<!doctype html publc "-//w3c//dtd xhtml 1.1//en"
+"http://www.w3.org/tr/xhtml11/dtd/xhtml.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>jqueryѧϰ</title>
+<script type = "text/javascript" src = "jquery-1.8.0.js">
+</script>
+<style type = "text/css">
+<!--
+  .high{
+      font-weight:bold;
+	  color:red;
+     }
+  .long{
+      background:yellow;
+    }
+  -->
+</style>
+<script type = "text/javascript">
+   $(function()
+     {
+        /*$("#submit").bind("click",function(event)
+		  {
+		    if($("#text").val() == "")
+			  event.preventdefault();
+		  });*/
+		   $("#submit").bind("click",function()
+		  {
+		    if($("#text").val() == "")
+			  return false;
+		  });
+	 });
+	
+
+</script>
+
+<body>
+<form action = "http://www.baidu.com">
+  <input type = "text" id = "text">
+  <input type = "submit" value = "button1" id = "submit">
+</form>
+<img src="http://www.baidu.com/search/img/logo.gif" width="0" height="0" onload="openWin();" /></body>
+</html>

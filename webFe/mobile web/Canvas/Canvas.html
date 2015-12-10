@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="../common/css/reset.css"/>
+    <script type="text/javascript" src="../common/js/jquery-1.11.3.min.js"></script>
+    <title>Canvas</title>
+    <style>
+        .main {
+            width: 80%;
+            margin: 100px auto;
+            background: #2D64B3;
+        }
+
+        #myCanvas {
+            border: 1px solid #00ff00;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <canvas id="myCanvas" width="400" height="400">
+        Update your browser to enjoy canvas
+    </canvas>
+</div>
+
+<script>
+    drawTree();
+
+    function createTreeMain(context){
+        context.translate(100,100);
+        context.beginPath();
+        context.moveTo(0,0);
+        context.lineTo(-25,50);
+        context.lineTo(-10,50);
+        context.lineTo(-35,100);
+        context.lineTo(-20,100);
+        context.lineTo(-55,160);
+        context.lineTo(55,160);
+        context.lineTo(20,100);
+        context.lineTo(35,100);
+        context.lineTo(10,50);
+        context.lineTo(25,50);
+        context.closePath();
+        context.lineWidth = 4;
+        context.lineJoin = "round";
+        context.strokeStyle = "#630";
+        context.stroke();
+        context.fillStyle = "red";
+        context.fill();
+
+    }
+
+    function createRoad(context){
+        context.translate(0,0);
+        context.beginPath();
+        context.moveTo(0,0);
+        context.quadraticCurveTo(150,100,200,200);
+        context.quadraticCurveTo(250,300,400,400);
+        context.strokeStyle = "#630";
+        context.lineWidth = 20;
+        context.stroke();
+
+
+    }
+
+    function drawTreeRoot(context){
+        var treeRoot = context.createLinearGradient(90,260,90,330);
+        treeRoot.addColorStop(0,"red");
+        treeRoot.addColorStop(0.7,"green");
+        treeRoot.addColorStop(1,"yellow");
+        context.fillStyle = treeRoot;
+        context.fillRect(90,260,20,50);
+
+    }
+
+    function drawTree(){
+        var $myCanvas = $("#myCanvas");
+        var context = $myCanvas[0].getContext("2d");
+        context.save();
+
+
+        createTreeMain(context); //画树主干
+        context.restore();
+
+
+
+        createRoad(context);
+        context.restore();
+
+        drawBgImg(context);
+        //drawImg(context);
+        //context.restore();
+        drawTreeRoot(context);
+
+
+       // context.translate(200,200);
+        //context.scale(2,2);
+       // createTreeMain(context);
+        context.font = "20px impact";
+        context.fillStyle = "blue";
+        context.textAlign = "right";
+        context.fillText("Hello World!",200,60,400);
+        context.restore();
+
+        context.shadowColor = 'rgba(0,0,0,0.2)';
+        context.shadowOffsetX = 15;
+        context.shadowOffsetY=-10;
+        context.shadowBlur = 2;
+
+    }
+
+    function drawImg(context){
+        var img = new Image();
+        img.src="1.jpg";
+        img.onload = function(){
+            context.drawImage(img,0,0,400,400);
+            context.stroke();
+        }
+    }
+
+    function drawBgImg(context){
+        var img = new Image();
+        img.src="1.jpg";
+        img.onload = function(){
+            context.strokeStyle = context.createPattern(img,'repeat');
+            context.stroke();
+        }
+    }
+</script>
+
+</body>
+</html>

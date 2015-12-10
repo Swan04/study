@@ -1,0 +1,112 @@
+
+				 .kog{
+				     width:900px;
+					 height:5px;
+					 margin:auto;
+					 float:left;
+					 background:#FFFFFF;
+					 }
+		      #header{
+			      width:900px;
+				  height:110px;
+				  float:left;
+				  margin:auto;
+			  }
+			   #header1{
+			      width:900px;
+				  height:30px;
+				  margin:auto;
+				  float:left;
+				  background:#99ccff;
+			   }
+			   #header11{
+			      width:320px;
+				  height:30px;
+				  background:#99ccff;
+				  margin:auto;
+				  float:left;
+				  }
+				
+				 #header13{
+				    width:575px;
+					height:30px;
+					background:#99ccff;
+					margin:auto;
+					float:left;
+					}
+				  
+			   #header2{
+			      width:900px;
+				  height:70px;
+				  margin:auto;
+				  float:left;
+			    }
+			    #logo{
+				  width:320px;
+				  height:65px;
+				  float:left;
+				  clear:right;
+				  margin:0px;
+				}
+				#banner{
+				   width:570px;
+				   height:65px;
+				   float:right;
+				   margin:0px;
+				   background:#99ccff;
+				   }
+				#menu{
+				    width:900px;
+					height:35px;
+					margin:auto;
+					float:left;
+					background:#99ccff;
+					}
+			    .menu1{
+				     width:900px;
+					 height:25px;
+					 margin:auto;
+					 float:left;
+					 }
+			    #rest{
+				       width:900px;
+					   height:185px;
+					   margin:auto;
+					   float:left;
+				    }
+			    #ptable{
+				   border-style:solid;
+				       }
+			    a{
+			      text-decoration:none;
+				  cursor:hand;
+				}
+			    a:link{
+		         color:#00CC00;
+			         }
+		        a:visited{
+			      color:red;
+			           }
+			    a:hover{
+			       color:red;
+			          } 
+			    #ptr{
+				    font-size:20px;
+					border-collapse:collapse;
+					color:blue;
+					}
+			    #ptd{
+				    background:#CCFF99;
+					}
+				.font1{
+				    font-size:20px;
+					}
+				
+				
+				
+				
+				
+				
+				
+				
+				

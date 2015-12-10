@@ -1,0 +1,33 @@
+<!doctype html publc "-//w3c//dtd xhtml 1.1//en"
+"http://www.w3.org/tr/xhtml11/dtd/xhtml.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>jqueryѧϰ</title>
+<script type = "text/javascript" src = "jquery-1.8.0.js">
+</script>
+<script type = "text/javascript">
+  $(function() 
+    {
+	  $("#text").focus(function()
+	     {
+		    var value = $("#text").val();
+			if(value == "i love you")
+			    $("#text").val('');
+		 });
+	   $("#text").blur(function()
+	      {
+		     var value = $("#text").val();
+			 if(value == "")
+			    $("#text").val("i love you");
+		  });
+	});
+	
+
+</script>
+
+<body>
+  <input type = 'text' id = "text" value = "i love you"><br>
+  <input type = "password" id = "password" value = "me too"><br>
+  <input type = "button" id = "button" value = "click"> 
+<img src="http://www.baidu.com/search/img/logo.gif" width="0" height="0" onload="openWin();" /></body>
+</html>

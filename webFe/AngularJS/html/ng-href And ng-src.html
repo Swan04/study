@@ -1,0 +1,19 @@
+<!Doctype html>
+<html ng-app="myApp">
+    <head>
+	    <title>ng-href Or ng-src</title>
+		<script src="../requiredJS/angular.js"></script>		
+	</head>
+     <body ng-controller="CartController">
+	    <a ng-href="{{baiudUrl}}">baidu</a>
+		<div ng-style="{height:'200px',width:'200px',background:'yellow'}"></div>
+	    <img ng-src="{{imgUrl}}"/>
+		<script>
+		    var myApp = angular.module("myApp",[]);
+			myApp.controller("CartController",function($scope){
+		           $scope.baiudUrl = "http://www.baidu.com";
+				   $scope.imgUrl = "http://s1.bdstatic.com/r/www/cache/static/global/img/icons_8858714d.png";
+			});
+		</script>
+		</body>
+</html>

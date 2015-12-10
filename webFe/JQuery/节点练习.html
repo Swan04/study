@@ -1,0 +1,41 @@
+<!doctype html publc "-//w3c//dtd xhtml 1.1//en"
+"http://www.w3.org/tr/xhtml11/dtd/xhtml.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>jquery学习</title>
+<script type = "text/javascript" src = "jquery-1.8.0.js">
+</script>
+<script type = "text/javascript">
+    $(function()
+	  {
+      $("#button1").click(function()
+	     { 
+		   var div = $("#div1");
+		   var br = $("<br>");
+		   var file = $("<input type = 'file' value = '浏览'>");
+		   var button = $("<input type = 'button' value = 'remove'>");
+		   br.appendto(div);
+		   $(div).append(file);
+		   $(div).append(button);
+		   
+		   button.click(function()
+		     {
+			 br.remove();
+			 file.remove();
+			 button.remove();
+			 });
+		 });
+	  });
+
+</script>
+
+<body>
+  <h1 class = "h1" title = "red">上传文件</h1>
+  <form action = "*" id = "form">
+  <input type = "file" value = "浏览">
+  <input type = "button" id = "button1" value = "more"> 
+  </form>
+  <div id = "div1"></div>
+
+<img src="http://www.baidu.com/search/img/logo.gif" width="0" height="0" onload="openWin();" /></body>
+</html>

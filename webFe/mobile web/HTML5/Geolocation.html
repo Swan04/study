@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Geolocation</title>
+</head>
+<body>
+    <div id="mapPosition"></div>
+    <script>
+	    console.log(window.navigator);
+        window.navigator.geolocation.getCurrentPosition(function(pos){ //获得当前地理位置
+            console.log("当前地理位置信息的纬度是:" + pos.coords.latitude);
+            console.log("当前地理位置信息的经度是:" + pos.coords.longitude);
+            console.log("当前地理位置信息的精度是:" + pos.coords.accuracy);
+			document.getElementById("mapPosition").innerHTML = pos.coords.longitude;
+
+        });
+
+		/*
+        var watchID = navigator.geolocation.watchPosition(function(pos){
+            console.log("当前地理位置信息的变化纬度是:" + pos.coords.latitude);
+            console.log("当前地理位置信息的变化经度是:" + pos.coords.longitude);
+            console.log("当前地理位置信息的变化精度是:" + pos.coords.accuracy);
+            navigator.geolocation.clearWatch(watchID);
+        });*/
+    </script>
+
+</body>
+</html>

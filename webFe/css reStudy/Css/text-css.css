@@ -1,0 +1,10 @@
+#text{
+   text-indent:5em;
+   text-align:center;
+   word-spacing:3em;
+   letter-spacing:10px;
+   text-transform:uppercase;
+   text-decoration:blink;
+   white-space:nomal;
+   direction:rtl;
+}

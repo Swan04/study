@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>testUnderScore</title>
+</head>
+<body>
+     <script type="text/javascript" src="underscore.js"></script>
+    <script>
+        var MYOBJ = {
+            id:1,
+            name:"ZS",
+            age:2
+        };
+
+        //获取object对象所有的属性名称
+        console.log("keys:" + _.keys(MYOBJ).join("|"));
+
+        //返回object对象所有的属性值。
+        console.log("values:" + _.values(MYOBJ).join("|"));
+
+        //把一个对象转变为一个[key, value]形式的数组。
+        console.log("pairsArray:");
+        console.log(_.pairs(MYOBJ));
+
+        //返回一个object副本，使其键（keys）和值（values）对换。对于这个操作，必须确保object里所有的值都是唯一的且可以序列号成字符串.
+        console.log("invertOBJ:");
+        console.log(_.invert(MYOBJ));
+
+        //返回一个对象里所有的方法名, 而且是已经排序的 — 也就是说, 对象里每个方法(属性值是一个函数)的名称.
+        console.log(_.functions(_));
+
+        //复制source对象中的所有属性覆盖到destination对象上，并且返回 destination 对象. 复制是按顺序的, 所以后面的对象属性会把前面的对象属性覆盖掉(如果有重复).
+        var extend = {sex:"man"};
+        var extendNew = _.extend(extend,MYOBJ);
+        console.log("extendNew:");
+        console.log(extendNew);
+
+        //返回一个object副本，只过滤出keys(有效的键组成的数组)参数指定的属性值。或者接受一个判断函数，指定挑选哪个key。
+        console.log(_.pick(MYOBJ,['id','name']));
+
+        //返回一个object副本，只过滤出除去keys(有效的键组成的数组)参数指定的属性值。 或者接受一个判断函数，指定忽略哪个key。
+        console.log(_.omit(MYOBJ,['id','name']));
+
+        //用defaults对象填充object 中的undefined属性。 并且返回这个object。一旦这个属性被填充，再使用defaults方法将不会有任何效果。
+        console.log("defaults:");
+        console.log(_.defaults({name:"LS"},MYOBJ));
+
+        //创建 一个浅复制（浅拷贝）的克隆object。任何嵌套的对象或数组都通过引用拷贝，不会复制。
+        console.log("clone:");
+        console.log(_.clone(MYOBJ));
+
+        //用 object作为参数来调用函数interceptor，然后返回object。这种方法的主要意图是作为函数链式调用 的一环, 为了对此对象执行操作并返回对象本身。
+        _.tap(MYOBJ,function(){
+             console.log("tap:" + this.name);
+        });
+
+        //对象是否包含给定的键吗？等同于object.hasOwnProperty(key)，但是使用hasOwnProperty 函数的一个安全引用
+        console.log("hasOwnProperty:" + _.has(MYOBJ,"id"));
+
+        //返回一个函数，这个函数返回任何传入的对象的key 属性。
+        var propertyFunc = _.property("name");
+        console.log("propertyFunc:" + propertyFunc(MYOBJ));
+
+        //返回一个断言函数，这个函数会给你一个断言 可以用来辨别 给定的对象是否匹配attrs指定键/值属性。
+        //matches
+
+        //执行两个对象之间的优化深度比较，确定他们是否应被视为相等。
+        console.log("isEqual:" + _.isEqual(MYOBJ,{id:1,name:"ZS",age:2}));
+
+        //如果object 不包含任何值(没有可枚举的属性)，返回true。 对于字符串和类数组（array-like）对象，如果length属性为0，那么_.isEmpty检查返回true。
+        console.log("isEmpty:" + _.isEmpty([1]));
+
+        //如果object是一个DOM元素，返回true。
+        console.log("isElement:" + _.isElement(document.body));
+
+        //如果object是一个数组，返回true。
+        console.log("isArray:" + _.isArray(document.body.childNodes));
+
+        //如果object是一个对象，返回true。需要注意的是JavaScript数组和函数是对象，字符串和数字不是。
+        console.log("isObject:" + _.isObject(document.body.childNodes));
+        
+        //如果object是一个参数对象，返回true。
+        console.log("isArguments:" + _.isArguments([]));
+
+        //如果object是一个函数（Function），返回true。
+        console.log("isFunction:" + _.isFunction(_.isFunction));
+
+        //如果object是一个字符串，返回true。
+        console.log("isString:" + _.isString("name"));
+
+        //如果object是一个数值，返回true (包括 NaN)。
+        console.log("isNumber:" + _.isNumber(-Infinity));
+
+        //如果object是一个有限的数字，返回true。
+        console.log("isFinite:" + _.isFinite(Infinity));
+
+        //如果object是一个布尔值，返回true。 Returns true if object is either true or false.
+        console.log("isBoolean:" + _.isBoolean(null));
+
+        //如果object是一个Date类型（日期时间），返回true。
+        console.log("isDate:" + _.isDate(new Date()));
+
+        //如果object是一个正则表达式，返回true。
+        console.log("isRegExp:" + _.isRegExp(/^abc$/g));
+
+        //如果object是 NaN，返回true。
+        console.log("isNaN:" + _.isNaN(undefined));
+
+        //如果object的值是 null，返回true。
+        console.log("isNull:" + _.isNull(null));
+
+
+        //如果object的值是 null，返回true。
+        console.log("isUndefined:" + _.isUndefined(undefined));
+
+        
+
+    </script>
+
+</body>
+</html>

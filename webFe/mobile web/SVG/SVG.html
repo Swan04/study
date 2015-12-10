@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SVG</title>
+    <style type="text/css">
+        .main {
+            width: 80%;
+            margin: 100px auto;
+            background: #2D64B3;
+        }
+
+    </style>
+</head>
+<body>
+<div class="main">
+    <svg width="500" height="200">
+        <defs>
+            <pattern id="circlePattern" patternUnits="userSpaceOnUse" x="0" y="0" width="100" height="67" viewBox="0 0 100 67">
+                <image x="0" y="0" width="100" height="67" xlink:href="1.jpg"  />
+            </pattern>
+            <linearGradient id="rectGradient">
+                <stop offset="0%" stop-color="#000"></stop>
+                <stop offset="100%" stop-color="#F00"></stop>
+            </linearGradient>
+            <g id="ShapeGroup">
+                <rect x="10" y="20" height="100" width="80" stroke="red" fill="url(#rectGradient)"/>
+                <circle cx="120" cy="80" r="40" stroke="#00f" fill="url(#circlePattern)" stroke-width="8"/>
+            </g>
+        </defs>
+
+        <use xlink:href="#ShapeGroup"  transform="translate(10,0) scale(0.5) rotate(10)"/>
+        <use xlink:href="#ShapeGroup"  transform="translate(90,0) scale(0.5) rotate(10)"/>
+        <use xlink:href="#ShapeGroup"  transform="translate(200,0) scale(0.5) rotate(10)"/>
+    </svg>
+</div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>quadrate</title>
+    <link type="text/css" rel="stylesheet" href="../../common/css/reset.css"/>
+    <style>
+        .main {
+            width: 80%;
+            height: 500px;
+            background: #999;
+            margin: 30px auto;
+            padding: 100px;
+        }
+
+        .quadrate {
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+
+        .quadrate::before {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 50px;
+            background: blue;
+            transform: rotate(180deg) skew(-50deg);
+            transform-origin: top center;
+            transition-delay: 1s;
+            transition-duration: 2s;
+        }
+
+        .quadrate::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 100px;
+            background: yellow;
+            transform:skew(0deg,-40deg)  translate(100px,-15px);
+            transform-origin: right center;
+            transition-delay: 3s;
+            transition-duration: 1s;
+
+        }
+
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="quadrate"></div>
+</div>
+
+</body>
+</html>

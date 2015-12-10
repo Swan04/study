@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>testUnderScore</title>
+</head>
+<body>
+     <script type="text/javascript" src="underscore.js"></script>
+    <script>
+        var MYOBJ = {
+            id:1,
+            name:"ZS",
+            age:2
+        };
+
+
+
+        //调用给定的迭代函数n次,每一次调用iteratee传递index参数。生成一个返回值的数组。
+        //返回一个min 和 max之间的随机整数。如果你只传递一个参数，那么将返回0和这个参数之间的整数。 
+        console.log("times:");
+        console.log(_.times(5,function(num){
+            return _.random(0,num);
+        }));
+
+        //允许用您自己的实用程序函数扩展Underscore。传递一个 {name: function}定义的哈希添加到Underscore对象，以及面向对象封装。
+        _.mixin({myFunc:function(data){
+            console.log("myFunc" + data);
+        }});
+        _.myFunc("success");
+
+        //一个重要的内部函数用来生成可应用到集合中每个元素的回调， 返回想要的结果 - 无论是等式，任意回调，属性匹配，或属性访问。 
+        var stooges = [{name: 'curly', age: 25}, {name: 'moe', age: 21}, {name: 'larry', age: 23}];
+        console.log(_.map(stooges, _.iteratee('age')));
+
+        //为需要的客户端模型或DOM元素生成一个全局唯一的id。如果prefix参数存在， id 将附加给它。
+        console.log(_.uniqueId('contact_'));
+
+        //转义HTML字符串，替换&, <, >, ", ', 和 /字符。
+        var escapeHTML = _.escape(document.body.innerHTML)
+        console.log("escapeHTML:" + escapeHTML);
+        
+        //和escape相反。转义HTML字符串，替换&, &lt;, &gt;, &quot;, &#96;, 和 &#x2F;
+        var unescapeHTML = _.unescape(escapeHTML)
+        console.log("unescapeHTML:" + unescapeHTML);
+
+        //如果对象 object 中的属性 property 是函数, 则调用它, 否则, 返回它。
+        var object = {cheese: 'crumpets', stuff: function(){ return 'nonsense'; }};
+        console.log(_.result(object, 'cheese'));
+        console.log(_.result(object, 'stuff'));
+
+        //获得当前时间撮
+        console.log("now:" + _.now());
+
+
+
+        //放弃Underscore 的控制变量"_"。返回Underscore 对象的引用。
+        console.log("underscore :" + _.noConflict());
+
+
+
+    </script>
+
+</body>
+</html>

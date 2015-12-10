@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>testUnderScore</title>
+</head>
+<body>
+     <script type="text/javascript" src="underscore.js"></script>
+    <script>
+           var MYARRAY = [2,3,3,1,4,1,3,1,[9],false];
+           var MYARRAYNEW = [4,5,7,6];
+           var MYOBJARRAY = [{id:1,name:"ZS"},{id:2,name:"LS"},{id:3,name:"WW"},{id:4,name:"WW"}];
+
+           //返回array（数组）的第一个元素。传递 n参数将返回数组中从第一个元素开始的n个元素（注：返回数组中前 n 个元素.）。
+           var firstItem = _.first(MYARRAY);
+           console.log("firstItem:" + firstItem);
+
+           //返回数组中除了最后一个元素外的其他全部元素。 在arguments对象上特别有用。传递 n参数将从结果中排除从最后一个开始的n个元素（注：排除数组后面的 n 个元素）。
+           var initialArray = _.initial(MYARRAY);
+           console.log("initialArray:" + initialArray.join("|"));
+
+           //返回array（数组）的最后一个元素。传递 n参数将返回数组中从最后一个元素开始的n个元素（注：返回数组里的后面的n个元素）。
+           var lastItem = _.last(MYARRAY);
+           console.log("last:" + lastItem);
+
+           //返回数组中除了第一个元素外的其他全部元素。传递 index 参数将返回从index开始的剩余所有元素 。
+           var restArray = _.rest(MYARRAY);
+           console.log("restArray:" + restArray);
+
+           //返回一个除去所有false值的 array副本。 在javascript中, false, null, 0, "", undefined 和 NaN 都是false值.
+           var compactArray = _.compact(MYARRAY);
+           console.log("compactArray:" + compactArray);
+
+           //将一个嵌套多层的数组 array（数组） (嵌套可以是任何层数)转换为只有一层的数组。 如果你传递 shallow参数，数组将只减少一维的嵌套。
+           var flattenArray = _.flatten(MYARRAY);
+           console.log("flattenArray:" + flattenArray);
+
+           //返回一个删除所有values值后的 array副本。（注：使用===表达式做相等测试。）
+           var withoutArray = _.without(MYARRAY,4);
+           console.log("withoutArray:" + withoutArray);
+
+           //返回传入的 arrays（数组）并集：按顺序返回，返回数组的元素是唯一的，可以传入一个或多个 arrays（数组）
+           var unionArray = _.union(MYARRAY,MYARRAYNEW);
+           console.log("unionArray:" + unionArray);
+
+           //返回传入 arrays（数组）交集。结果中的每个值是存在于传入的每个arrays（数组）里。
+           var intersectionArray = _.intersection(MYARRAY,MYARRAYNEW);
+           console.log("intersectionArray:" + intersectionArray);
+
+           //类似于without，但返回的值来自array参数数组，并且不存在于other 数组.
+           var differenceArray = _.difference(MYARRAY,MYARRAYNEW);
+           console.log("differenceArray:" + differenceArray);
+
+           //返回 array去重后的副本, 使用 === 做相等测试. 如果您确定 array 已经排序, 那么给 isSorted 参数传递 true值, 此函数将运行的更快的算法. 如果要处理对象元素, 传参 iterator 来获取要对比的属性.
+           var uniqArray = _.uniq(MYARRAY);
+           console.log("uniqArray:" + unionArray);
+
+           //将 每个arrays中相应位置的值合并在一起。在合并分开保存的数据时很有用. 如果你用来处理矩阵嵌套数组时, _.zip.apply 可以做类似的效果。
+           var zipArray = _.zip(MYARRAY,MYARRAYNEW);
+           console.log("zipArray:" +  zipArray);
+
+           //将数组转换为对象。传递任何一个单独[key, value]对的列表，或者一个键的列表和一个值得列表。 如果存在重复键，最后一个值将被返回。
+           var objectObj = _.object(MYARRAY,MYARRAYNEW);
+           console.log("objectObj:");
+           console.log(objectObj);
+
+           //返回value在该 array 中的索引值，如果value不存在 array中就返回-1。使用原生的indexOf 函数，除非它失效。如果您正在使用一个大数组，你知道数组已经排序，传递true给isSorted将更快的用二进制搜索..,或者，传递一个数字作为第三个参数，为了在给定的索引的数组中寻找第一个匹配值。
+           var indexOfItem = _.indexOf(MYARRAY,4);
+           console.log("indexOfItem:" + indexOfItem);
+
+           //返回value在该 array 中的从最后开始的索引值，如果value不存在 array中就返回-1。如果支持原生的lastIndexOf，将使用原生的lastIndexOf函数。 传递fromIndex将从你给定的索性值开始搜索。
+           var lastindexOfItem = _.indexOf(MYARRAY,4);
+           console.log("lastindexOfItem:" + lastindexOfItem);
+
+
+           //使用二分查找确定value在list中的位置序号，value按此序号插入能保持list原有的排序。 如果提供iterator函数，iterator将作为list排序的依据，包括你传递的value 。
+           var sortedIndexItem = _.sortedIndex(MYARRAY,3);
+           console.log("sortedIndexItem:" + sortedIndexItem);
+
+           //一个用来创建整数灵活编号的列表的函数，便于each 和 map循环。如果省略start则默认为 0；step 默认为 1.返回一个从start 到stop的整数的列表，用step来增加 （或减少）独占。值得注意的是，如果stop值在start前面（也就是stop值小于start值），那么值域会被认为是零长度，而不是负增长。-如果你要一个负数的值域 ，请使用负数step.
+           var rangeArray = _.range(0,30,3);
+           console.log("rangeArray:" + rangeArray);
+
+          
+    </script>
+
+</body>
+</html>

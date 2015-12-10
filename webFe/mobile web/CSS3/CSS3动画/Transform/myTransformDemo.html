@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="../../common/css/reset.css"/>
+    <title>myTransformDemo</title>
+    <style>
+        .main {
+            width: 80%;
+            height: 300px;
+            background: #999;
+            margin: 30px auto;
+            padding: 30px;
+        }
+        .icon {
+            display: block;
+            width:30px;
+            height: 20px;
+            background: red;
+            transform: rotate(45deg);
+            border-top-left-radius: 50%;
+            border-bottom-left-radius: 50%;
+            position: relative;
+
+        }
+        .icon::after {
+            content: "";
+            display: block;
+            width:30px;
+            height: 20px;
+            background: red;
+            transform:  rotate(90deg);
+            border-top-left-radius: 50%;
+            border-bottom-left-radius: 50%;
+            position: absolute;
+            left: 6px;
+            bottom: 6px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+         <span class="icon">
+
+         </span>
+
+    </div>
+
+</body>
+</html>

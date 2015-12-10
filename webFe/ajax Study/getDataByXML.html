@@ -1,0 +1,22 @@
+﻿<html>
+<head>AJax传输数据的三种方法</head>
+<body>
+     <select id="opt"></select>
+     <script type="text/javascript">
+	     var myRequest = getXMLHTTPRequest();
+		 if(myRequest){
+		     myRequest.open("GET","data.xml",false);
+			 myRequest.send(null);
+			 var xml = myRequest.responseXML;
+			 var select = document.getElementById("opt");
+			 var html = "";
+			 html = "<select id='opt'><option>" + xml.childNodes[0].childNodes[0].text + "</option>";
+			 html += "<option>" + xml.childNodes[0].childNodes[0].text + "</option>";
+			 select.outerHTML = html;
+		 
+		 
+		 }
+	 </script>
+</body>
+
+</html>

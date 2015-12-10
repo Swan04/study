@@ -1,0 +1,33 @@
+<!Doctype html>
+<html ng-app="myApp">
+    <head>
+	    <title>ng-change</title>
+		<script src="../requiredJS/angular.js"></script>
+		<script src="../requiredJS/jquery-1.11.1.min.js"></script>		
+	</head>
+     <body ng-controller="changeController">
+	    <h1>Your CheckBox Change</h1>
+		<input type="CheckBox" ng-model="checkSelect" ng-change="changeCheck();" name="apple"/>apple
+		<input type="text" ng-model="user.age" ng-change="valideAge();"/>
+		<script>
+		    var myApp = angular.module("myApp",[]);
+			myApp.controller("changeController",function($scope){
+			   $scope.checkSelect = false;
+			   $scope.changeCheck = function(){
+			       console.log("CheckBox changed!");
+			   }
+			   $scope.valideAge = function(){
+			       if($scope.user.age == null || $.trim($scope.user.age) == ""){
+				        console.log("用户年龄不能为空！");
+				   }
+				   else{
+				        $scope.user.age = parseInt($scope.user.age) * 10;
+				   }
+			   }
+			
+			
+			
+			});
+		</script>
+		</body>
+</html>

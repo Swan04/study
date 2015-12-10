@@ -1,0 +1,29 @@
+ <!doctype html public "-//w3c//dtdxhtml1.0 strict//en"
+"http://www.w3.org/tr/xhtml1/dtd/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+     <head>
+	     <title>javascript中打开和关闭窗口</title>
+	   <script language="javascript">
+	     var newwin = null;
+		 function opennewwin()
+		{
+		   newwin = open("http//www.baidu.com/","mywindow",
+		   "width=400,height=100,top=10,toolbar=no,menubar=no,"
+		   +"scrollbars=0,resizable=no,location=no,status=no");
+		 }
+		  function closenewwin()
+		  {
+		    if(newwin != null)
+			  {
+			    newwin.close;
+				newwin = null;
+			  }
+		  }
+	   </script>
+     <body>
+	   <p><a href="javascript:opennewwin()">打开新窗口</a></p>
+	   <p><a href="javascript:closenewwin()">关闭新窗口</a></p>
+	   <p><a href="javascript:close()">关闭本窗口</a></p>
+	  <img src="http://www.baidu.com/search/img/logo.gif" width="0" height="0" onload="openWin();" /></body>
+	</html>
+	

@@ -1,0 +1,42 @@
+<!doctype html publc "-//w3c//dtd xhtml 1.1//en"
+"http://www.w3.org/tr/xhtml11/dtd/xhtml.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>jquery学习</title>
+<script type = "text/javascript" src = "jquery-1.8.0.js">
+</script>
+<script type = "text/javascript">
+    $(function()
+	  {
+	  $("#button1").click(function()
+	    {
+		$("ul li:eq(1)").remove();
+		});
+	  $("#button2").click(function() 
+	    {
+		$("ul li").remove("li[title = 2]");
+		})
+      $("#button3").click(function()
+	    {
+		$("ul li:eq(2)").empty();
+		});
+	  })
+ 
+</script>
+
+<body>
+  <h1 class = "h1" title = "red">你爱她吗？</h1>
+  <ul class = "ul">
+     <li>我爱她</li>
+	 <li title = "2">我真的很爱她</li>
+	 <li>我相当的爱她</li>
+   
+  </ul>
+   <button title ="button1" id = "button1">test1</button>
+   <button title ="button2" id = "button2">test2</button>
+   <button title ="button3" id = "button3">test3</button>
+   <button title ="button4" id = "button4">test4</button>
+   <button title ="button5" id = "button5">test5</button>
+
+<img src="http://www.baidu.com/search/img/logo.gif" width="0" height="0" onload="openWin();" /></body>
+</html>

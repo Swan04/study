@@ -1,0 +1,19 @@
+<!Doctype html>
+<html ng-app="myApp">
+    <head>
+	    <title>ng-show Or ng-hide</title>
+		<script src="../requiredJS/angular.js"></script>		
+	</head>
+     <body ng-controller="CartController">
+	    <span>显示的div</span>
+	    <div ng-show="true">显示的div</div>
+	    <span>隐藏的div</span>
+	    <div ng-hide="true">隐藏的div</div>
+		<script>
+		    var myApp = angular.module("myApp",[]);
+			myApp.controller("CartController",function($scope){
+		
+			});
+		</script>
+		</body>
+</html>

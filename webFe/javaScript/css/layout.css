@@ -1,0 +1,26 @@
+<style type="text/css">
+body{
+font-family:"helvetica","arial",sans-serif;
+color£º#333;
+background-color:#ccc;
+margin:lem %10;
+}
+h1{
+color:#333;
+background-color:transparent;
+}
+a{
+color:#c60;
+background-color:transparent;
+font-weight:bold;
+text-decoration:none;
+}
+ul{
+padding:0;
+}
+li{
+float:left;
+padding:lem;
+list-style:none;
+}
+</style>

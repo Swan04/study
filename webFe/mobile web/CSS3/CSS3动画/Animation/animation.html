@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="../../common/css/reset.css"/>
+    <title>animation</title>
+    <style>
+        .main {
+            width: 80%;
+            background: #999;
+            margin: 30px auto;
+            padding: 30px;
+            overflow: hidden;
+        }
+
+        .item {
+            width: 240px;
+            height: 240px;
+            background: url("1.jpg");
+            float: left;
+            margin: 10px;
+            animation-name: rotateImg;/* 动画名称*/
+            animation-duration: 10s;/* 动画执行时间*/
+            animation-delay: 0.5s;/* 动画开始延迟时间*/
+            animation-direction: normal;/* 动画执行方向normal/alternation*/
+            animation-iteration-count: 1;/* 动画执行次数*/
+            animation-timing-function: linear;/* 动画执行效果*/
+        }
+
+        @keyframes rotateImg {
+            0% {
+                transform: rotate(0deg);
+            }
+            50% {
+                transform: rotate(180deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+
+
+</div>
+
+</body>
+</html>

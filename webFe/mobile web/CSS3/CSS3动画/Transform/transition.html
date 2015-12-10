@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="../../common/css/reset.css"/>
+    <title>transtion</title>
+    <style>
+        .main {
+            width: 80%;
+            background: #999;
+            margin: 30px auto;
+            padding: 30px;
+            overflow: hidden;
+        }
+        .item {
+            width: 100px;
+            height: 100px;
+            background: #0066cc;
+            float: left;
+            margin-left: 10px;
+        }
+        .item:hover {
+            transition-property:background-color;
+            background: #00ff00;
+            transition-duration: 2s;
+            transition-delay: 0.5s;
+            transition-timing-function: ease-out;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+
+
+    </div>
+
+</body>
+</html>

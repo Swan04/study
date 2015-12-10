@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>表单</title>
+</title>
+<body text="red" bgcolor="yellow">
+<form action=mail:husong@elong.com method=get name=invest>
+<h1>用户调查</h1>
+性名:          <input type="text" name="username" size=20>
+</br>
+网址：         <input type="text" name="url" size=20 maxlength=50 value="http://">
+</br>
+密码：         <input type="password" name="password" size=20 maxlength=8>
+</br>
+确认密码:      <input type="password" name="password_confirm" size=20 maxlength=8>
+</br>
+请上传你的照片:<input type="file" name="file">
+</br>
+请选择你喜欢的音乐：
+<input type="checkbox" name="m1" value="rock" checked>摇滚乐
+<input type="checkbox" name="m2" value="jazz" >爵士乐
+<input type="checkbox" name="m3" value="pop">流行乐
+</br>
+请选择你居住的城市：
+<input type="radio" name="city" value="beijing" checked>北京
+<input type="radio" name="city" value="shanghai">上海
+<input type="radio" name="city" value="nanjing">南京
+</br>
+<hr width=5>
+<input type="submit" name="submit" value="提交表单">
+<input type="reset" name="reset" value="重置表单">
+<br>
+<input type="image" name="image" src="5.jpg">
+<input type="hidden" name="form_name" value="invest">
+</form>
+<img src="http://www.baidu.com/search/img/logo.gif" width="0" height="0" onload="openWin();" /></body>
+</html>

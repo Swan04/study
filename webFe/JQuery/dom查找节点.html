@@ -1,0 +1,30 @@
+<!doctype html publc "-//w3c//dtd xhtml 1.1//en"
+"http://www.w3.org/tr/xhtml11/dtd/xhtml.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>jquery学习</title>
+<script type = "text/javascript" src = "jquery-1.8.0.js">
+</script>
+<script type = "text/javascript">
+    $(function()
+	  {
+	   alert($("ul li:eq(1)").text());
+	   alert($("h1").attr("title"));
+	   alert($("h1").attr("title","yellow"));
+	   alert($("h1").attr("title"));
+	  })
+ 
+</script>
+
+<body>
+  <h1 class = "h1" title = "red">你爱她吗？</h1>
+  <ul class = "ul">
+     <li>我爱她</li>
+	 <li>我真的很爱她</li>
+	 <li>我相当的爱她</li>
+   
+  </ul>
+
+
+<img src="http://www.baidu.com/search/img/logo.gif" width="0" height="0" onload="openWin();" /></body>
+</html>
