@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
+	<title>Flex</title>
+	<style type="text/css">
+        .main {
+        	width: 60%;
+        	height: 500px;
+        	background: #888;
+        	margin: 100px auto;
+        	display: -webkit-flex;
+        	display: flex;
+        }
+        .main div {
+        	height: 300px;
+        }
+        .main .first {
+        	background: #eee;
+        	-webkit-flex:1;
+        	flex:1;
+        }
+        .main .second {
+        	background: #1f3;        	
+        	width: 100px;
+        	display: -webkit-flex;
+            display: flex;
+            flex-direction:column;
+            flex-wrap:wrap;/*nowrap | wrap | wrap-reverse;*/
+        }
+        .main .last {
+        	background: #934;
+        	-webkit-flex:3;
+        	flex:3;
+        	display: -webkit-flex;
+            display: flex;
+            flex-direction:row;/*  row | row-reverse | column | column-reverse;*/
+            justify-content:space-between;/*flex-start | flex-end | center | space-between | space-around;*/
+            align-items:center;/*flex-start | flex-end | center | baseline | stretch;*/
+            align-content:center;/*flex-start | flex-end | center | space-between | space-around | stretch;*/
+        }
+
+        .main .first .first-child {
+        	display: -webkit-inline-flex;
+        	display: inline-flex;
+        }
+        .main .first .first-child i{
+            -webkit-flex:1;
+            flex:1;
+        }
+        .main .first .first-child strong{
+            -webkit-flex:3;
+            flex:3;
+        }
+
+        .second .second-child1 {
+        	-webkit-flex:1;
+        	flex:1;
+        	background: #235;
+        }
+        .second .second-child2 {
+        	-webkit-flex:2;
+        	flex:2;
+        	background: #852;
+        }
+        .second .second-child3 {
+        	-webkit-flex:3;
+        	flex:3;
+        	background: #f27;
+        }
+        .second .second-child {
+        	height: 200px;
+        	background: #f27;
+        }
+        .last .last-child1 {
+        	width: 100px;
+        	background: #bfa;
+        	height: 50%;
+        }
+        .last .last-child2 {
+        	width: 140px;
+        	background: #852;
+        	height: 50%;
+        }
+        .last .last-child3 {
+        	width: 50px;
+        	background: #fda;
+        	height: 50%;
+        	align-self:flex-end;/*auto | flex-start | flex-end | center | baseline | stretch;*/
+        }
+	</style>
+</head>
+<body>
+	 <div class="main">
+	 	 <div class="first">
+	 	 	<span class="first-child"><i>我们是</i><strong>中国人</strong><span>
+	 	 </div>
+	 	 <div class="second">
+	 	 	<div class="second-child"></div>
+	 	 	<div class="second-child1"></div>
+	 	 	<div class="second-child2"></div>
+	 	 	<div class="second-child3"></div>
+	 	 </div>
+	 	 <div class="last">
+	 	 	<div class="last-child1"></div>
+	 	 	<div class="last-child2"></div>
+	 	 	<div class="last-child3"></div>
+	 	 </div>
+	 </div>
+	
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Language" content="zh-CN">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
+        <meta name="format-detection" content="telephone=no" searchtype="map" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <title>选择器组件</title>
+        <link rel="stylesheet" href="common.css" />
+        <link rel="stylesheet" href="selector.css" />
+    </head>
+    <body>
+
+    	<div class="selector" id="selector" style="display:none;">
+    	</div>
+        <script type="text/javascript" src="zepto.js"></script>
+        <script type="text/javascript" src="iscroll.js"></script>
+        <script type="text/javascript" src="selector.js"></script>
+        <script>
+                // $("#selector").show();
+                // var selector = Selector({
+                //     dom:$("#selector"),
+                //     start:[1,100],
+                //     end:[50,3],
+                //     current:[3,44],
+                //     opeartorFunc:[function(start) {
+                //         if(!start) return "";
+                //         start = Number(start);
+                //         return start + 1;   
+                //     },function(start) {
+                //         if(!start) return "";
+                //         start = Number(start);
+                //         return start - 1;
+                //     }
+                //     ],
+                //     cancelClick:function() {
+                //         $(".selector-mask").hide();
+                //         $("#selector").html("");
+                //         $("#selector").hide();
+
+                //     },
+                //     sunmitClick:function(data) {
+                //         $(".selector-mask").hide();
+                //         $("#selector").html("");
+                //         $("#selector").hide();
+                //         alert(JSON.stringify(data));
+                //     }
+                // });
+
+
+                $("#selector").show();
+                var selector = Selector({
+                    dom:$("#selector"),
+                    start:[formatDay(new Date()),"10:00"],
+                    current:[formatDay(new Date()),"11:00"],
+                    end:[formatDay(new Date((new Date()).getYear(),(new Date()).getMonth(),(new Date()).getDate() + 30)),"22:00"],
+                    opeartorFunc:[function(start,type) {
+                        if(!start) return "";
+                        var date = start.split(/月|日/);
+                        var day = Number(date[1]);
+                        var month = Number(date[0]) - 1;
+                        var year = (new Date()).getFullYear();
+                        var rdate = new Date(year,month,day + 1);
+                        return formatDay(rdate);     
+                    },function(start,type) {
+                        if(!start) return "";
+                        var day = (new Date()).getDate();
+                        var month = (new Date()).getMonth();
+                        var year = (new Date()).getFullYear();
+                        var time = start.split(":");
+                        var hours = Number(time[0]);
+                        var minutes = Number(time[1]);
+                        var rdate = new Date(year,month,day,hours,minutes + 15);
+                        return formatTime(rdate); 
+                    }],
+                    cancelClick:function() {
+                        $(".selector-mask").hide();
+                        $("#selector").html("");
+                        $("#selector").hide();
+
+                    },
+                    sunmitClick:function(data) {
+                        $(".selector-mask").hide();
+                        $("#selector").html("");
+                        $("#selector").hide();
+                    }
+
+                    });
+
+                function formatDay(date) {
+                    var month = (date.getMonth() + 1);
+                    var day =  date.getDate();
+                    if(month < 10){
+                        month = "0" + month;
+                    }
+                    if(day < 10){
+                       day = "0" + day;
+                    }
+                    return month  + "月" + day + "日";
+                }
+                function formatTime(date) {
+                   var hours = date.getHours();
+                    var minutes = date.getMinutes();
+                    if(hours < 10){
+                        hours = "0" + hours;
+                    }
+                    if(minutes < 10){
+                        minutes = "0" + minutes;
+                    }
+                    return hours + ":" + minutes; 
+                }
+        </script>
+	</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../react-0.14.3/build/react.js"></script>
+    <script src="../react-0.14.3/build/react-dom.js"></script>
+    <script src="../react-0.14.3/build/browser.min.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">
+      var Alert = React.createClass({
+        render:function() {
+          return (
+            <ul>
+              {
+                React.Children.map(this.props.children,function(child) {
+                    return <li>{child}</li>;
+                })
+              }
+            </ul>
+          )
+        }
+      });
+      ReactDOM.render(
+        <Alert>
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
+        </Alert>,
+        document.getElementById('example')
+      );
+    </script>
+  </body>
+</html>

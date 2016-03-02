@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../react-0.14.3/build/react.js"></script>
+    <script src="../react-0.14.3/build/react-dom.js"></script>
+    <script src="../react-0.14.3/build/browser.min.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">
+      var name = "love";
+      var Alert = React.createClass({
+        propTypes:function(){
+            name:React.propTypes.string.isRequired
+        },
+        render:function() {
+          return <h1>{this.props.name}</h1>
+        }
+      });
+      ReactDOM.render(
+        <Alert name={name}/>,
+        document.getElementById('example')
+      );
+    </script>
+  </body>
+</html>

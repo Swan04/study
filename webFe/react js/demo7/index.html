@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../react-0.14.3/build/react.js"></script>
+    <script src="../react-0.14.3/build/react-dom.js"></script>
+    <script src="../react-0.14.3/build/browser.min.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">
+      var name = "love";
+      var Input = React.createClass({
+        handleChick:function(){
+            this.refs.myTextInput.focus();
+        },
+        render:function() {
+          return (
+            <div>
+              <input type="text" ref="myTextInput" />
+              <input type="button" value="Focus the text input" onClick={this.handleChick} />
+            </div>
+          );
+        }
+      });
+      ReactDOM.render(
+        <Input />,
+        document.getElementById('example')
+      );
+    </script>
+  </body>
+</html>

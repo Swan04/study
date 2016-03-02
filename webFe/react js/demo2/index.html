@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../react-0.14.3/build/react.js"></script>
+    <script src="../react-0.14.3/build/react-dom.js"></script>
+    <script src="../react-0.14.3/build/browser.min.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">
+      var names = ['first','second','third'];
+      ReactDOM.render(
+        <div>
+        {
+          names.map(function(name){
+            return <div>Hello,{name}!</div>
+          })
+        }
+        </div>,
+        document.getElementById('example')     
+      );
+    </script>
+  </body>
+</html>
