@@ -103,13 +103,16 @@ var _this;
                 'bounceTime': 200
             });
         var lis = $(scrollDoms[i]).children("ul").children();
-        $(scrollDoms[i]).css("height",(lis.length * HEIHGT ) + "px");
         var currentLi = $(scrollDoms[i]).children("ul").find(".currentData").index();
         iscrolls[i].scrollTo(0,-(currentLi - Math.floor(SIZE / 2))* HEIHGT, 0);
         iscrolls[i].on('scrollEnd', function(){
          scrollToEle(this);
         });
     }
+    $(document.body).css("height","100%");
+    $(document.body).css("overflow","hidden");
+    $(document.getElementsByTagName("html")[0]).css("height","100%");
+    $(document.getElementsByTagName("html")[0]).css("overflow","hidden");
 
 
   }
@@ -143,6 +146,10 @@ var _this;
   }
 
   function submitClick() {
+    $(document.body).css("height","100%");
+    $(document.body).css("overflow","auto");
+    $(document.getElementsByTagName("html")[0]).css("height","100%");
+    $(document.getElementsByTagName("html")[0]).css("overflow","auto");
     var currentLis = $(".currentData");
     var currentDatas = [];
 
@@ -154,6 +161,10 @@ var _this;
   }
 
   function cancelClick() {
+    $(document.body).css("height","100%");
+    $(document.body).css("overflow","auto");
+    $(document.getElementsByTagName("html")[0]).css("height","100%");
+    $(document.getElementsByTagName("html")[0]).css("overflow","auto");
     _this.data.cancelClick();
     removeEvent();
   }
