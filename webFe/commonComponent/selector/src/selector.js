@@ -2,9 +2,9 @@
 *
 *
 *参数说明
-* // $("#selector").show();
+* // document.querySelector("#selector").style.display = "block";
   // var selector = Selector({
-  //     dom:$("#selector"),   //选择器父dom元素（必选）
+  //     dom:document.querySelector("#selector"),   //选择器父dom元素（必选）
   //     start:[1,50],    //选择器开始节点，数组可以支持多选择（必选）
   //     end:[50,1],     //选择器结束节点，数组可以支持多选择（必选）
   //     current:[3,3],   //选择器当前节点，数组可以支持多选择（必选）
@@ -19,16 +19,10 @@
   //     }
   //     ],
   //     cancelClick:function() { //退出按钮回调方法（必选）
-  //         $(".selector-mask").hide();
-  //         $("#selector").html("");
-  //         $("#selector").hide();
 
   //     },
   //     sunmitClick:function(data) {//确定按钮回调方法（必选）
-  //         $(".selector-mask").hide();
-  //         $("#selector").html("");
-  //         $("#selector").hide();
-  //         alert(JSON.stringify(data));
+  //         console.log(data);
   //     }
   // });
 *
@@ -38,6 +32,7 @@
 var _this;
     var SIZE = 7;//每页多少项  （可以修改项数）
     var HEIHGT = 32; //每项高度（可以修改每项高度）
+    var bounceTime = 1000;//停止后运行时间
 
   function Selector(data) {
        _this = this;
@@ -54,14 +49,16 @@ var _this;
   }
 
   function initCss() {//初始化样式
-    $(".selector-containtor").height(SIZE*HEIHGT);
-    $(".selector .currentDataBorder").css("top",Math.floor(SIZE/2)*HEIHGT+"px")
+    document.querySelector(".selector-containtor").style.height = SIZE*HEIHGT + "px";
+    document.querySelector(".selector .currentDataBorder").style.top = Math.floor(SIZE/2)*HEIHGT+"px";
   }
 
     //验证组件所需参数是否正确
   function validationData(){
     if(!(_this.data || _this.data.dom 
-      || _this.data.start || _this.data.current || _this.data.end || isArray())){
+      || _this.data.start || _this.data.current || _this.data.end || Array.isArray(_this.data.start) 
+      || Array.isArray(_this.data.current) || Array.isArray(_this.data.end) 
+      || Array.isArray(_this.data.opeartorFunc) || _this.data.cancelClick || _this.data.sunmitClick)){
           console.log("组件需要参数传递错误！");
       return;
     }
@@ -89,40 +86,46 @@ var _this;
   }
 
   function bindEvent() {//绑定方法
-    _this.data.dom.on('click','.submit',submitClick);
-    _this.data.dom.on('click','.cancel',cancelClick);
+    document.querySelector('.selector .submit').onclick = submitClick;
+    document.querySelector('.selector .cancel').onclick = cancelClick;
     initIScroll();
   }
   function initIScroll() {
-    var scrollDoms = $(".selector-containtor-item");
+    var scrollDoms = document.querySelectorAll(".selector-containtor-item");
     var iscrolls = []; 
     for(var i = 0,len = scrollDoms.length;i < len;i ++) {
         iscrolls[i] = new IScroll(scrollDoms[i],{
                 'resizeScrollbars': false,
-                'click': true,
-                'bounceTime': 200
+                'click': true
             });
-        var lis = $(scrollDoms[i]).children("ul").children();
-        var currentLi = $(scrollDoms[i]).children("ul").find(".currentData").index();
+        var lis = scrollDoms[i].querySelectorAll("ul li");
+        var currentLi = scrollDoms[i].querySelector("ul .currentData").getAttribute("index");
         iscrolls[i].scrollTo(0,-(currentLi - Math.floor(SIZE / 2))* HEIHGT, 0);
         iscrolls[i].on('scrollEnd', function(){
          scrollToEle(this);
         });
     }
-    $(document.body).css("height","100%");
-    $(document.body).css("overflow","hidden");
-    $(document.getElementsByTagName("html")[0]).css("height","100%");
-    $(document.getElementsByTagName("html")[0]).css("overflow","hidden");
+    lockBody();
+  }
 
-
+  function lockBody() {
+    document.body.style.height = "100%";  
+    document.body.style.overflow = "hidden";
+    document.querySelector("html").style.height = "100%";
+    document.querySelector("html").style.overflow = "hidden";
+  }
+  function unlockBody() {
+    document.body.style.height = "auto";  
+    document.body.style.overflow = "auto";
+    document.querySelector("html").style.height = "auto";
+    document.querySelector("html").style.overflow = "auto";
   }
 
   function scrollToEle(scroll, opts) {
             opts = opts || {};
             var scrollTop = Math.abs(scroll.y),
-                bounceTime = opts.bounceTime || 0,
-                scrollCon = $(scroll.wrapper),
-                lis = scrollCon.find("li"),
+                scrollCon = scroll.wrapper,
+                lis = scrollCon.querySelectorAll("li"),
                 ele,
                 value;
             if(opts.ele){
@@ -130,43 +133,46 @@ var _this;
             }else{
                 var currentIndex = Math.round(scrollTop / HEIHGT);
                 var index = Math.round(scrollTop / HEIHGT) + Math.floor(SIZE / 2);
-                ele = lis.get(index);
+                ele = lis[index];
              
                
             }
-              
-            lis.removeClass("currentData");
-            $(ele).addClass("currentData");
+            scrollCon.querySelector(".currentData").setAttribute("class","");
+            ele.setAttribute("class","currentData");
             scroll.scrollTo(0,-currentIndex * HEIHGT, bounceTime);
   }
 
-  function removeEvent() {
-    _this.data.dom.off('click','.submit',submitClick);
-    _this.data.dom.off('click','.cancel',cancelClick);
+  function removeEvent() { 
+    document.querySelector('.selector .submit').onclick = null;
+    document.querySelector('.selector .cancel').onclick = null;
   }
 
-  function submitClick() {
-    $(document.body).css("height","100%");
-    $(document.body).css("overflow","auto");
-    $(document.getElementsByTagName("html")[0]).css("height","100%");
-    $(document.getElementsByTagName("html")[0]).css("overflow","auto");
-    var currentLis = $(".currentData");
+  function submitClick() { //确认
+    removeEvent();
+    unlockBody();
+    var currentLis = document.querySelectorAll(".currentData");
     var currentDatas = [];
 
     for(var i = 0,len = currentLis.length;i < len;i ++) {
-        currentDatas.push($(currentLis[i]).html());
+        currentDatas.push(currentLis[i].innerHTML);
     }
+    hideSelect();
     _this.data.sunmitClick(currentDatas);
-    removeEvent();
+
   }
 
-  function cancelClick() {
-    $(document.body).css("height","100%");
-    $(document.body).css("overflow","auto");
-    $(document.getElementsByTagName("html")[0]).css("height","100%");
-    $(document.getElementsByTagName("html")[0]).css("overflow","auto");
-    _this.data.cancelClick();
+  function cancelClick() { //退出
     removeEvent();
+    unlockBody()
+    hideSelect();
+    _this.data.cancelClick();
+
+  }
+
+  function hideSelect() {
+    document.querySelector('.selector-mask').style.display = "none";
+    document.querySelector('#selector').style.display = "none";
+
   }
 
 
@@ -182,17 +188,24 @@ var _this;
         containterHtml += '<div class="selector-containtor-item"><ul class="selector-info" data-index="' + i + '">';
         for(var j = 0,itemLen = item.length;j < itemLen;j ++) {
           if(item[j] != _this.data.current[i]){
-            containterHtml +=   '<li>' + (item[j] || '') + '</li>';
+            containterHtml +=   '<li index="' + j + '">' + (item[j] || '') + '</li>';
           }
           else {
-            containterHtml +=   '<li class="currentData">' + (item[j] || '') + '</li>';
+            containterHtml +=   '<li index="' + j + '" class="currentData">' + (item[j] || '') + '</li>';
           }
         }
         containterHtml += '</ul></div>'
       }
       containterHtml += '<div class="currentDataBorder"></div></div>';   
-      _this.data.dom.html(opratorHtml + containterHtml);
+      _this.data.dom.innerHTML = opratorHtml + containterHtml;
+      addMask();
       
+  }
+
+  function addMask() {
+    var el = document.createElement("div");
+    el.className = "selector-mask";
+    document.body.appendChild(el);
   }
 
 

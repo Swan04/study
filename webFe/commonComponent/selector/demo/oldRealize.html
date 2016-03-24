@@ -15,9 +15,8 @@
 
     	<div class="selector" id="selector" style="display:none;">
     	</div>
-        <script type="text/javascript" src="zepto.js"></script>
-        <script type="text/javascript" src="iscroll.js"></script>
-        <script type="text/javascript" src="selector.js"></script>
+        <script type="text/javascript" src="../lib/iscroll.js"></script>
+        <script type="text/javascript" src="../src/selector.js"></script>
         <script>
                 // $("#selector").show();
                 // var selector = Selector({
@@ -50,9 +49,9 @@
                 // });
 
 
-                $("#selector").show();
+                document.querySelector("#selector").style.display = "block";
                 var selector = Selector({
-                    dom:$("#selector"),
+                    dom:document.querySelector("#selector"),
                     start:[formatDay(new Date()),"10:00"],
                     current:[formatDay(new Date()),"11:00"],
                     end:[formatDay(new Date((new Date()).getYear(),(new Date()).getMonth(),(new Date()).getDate() + 30)),"22:00"],
@@ -76,15 +75,13 @@
                         return formatTime(rdate); 
                     }],
                     cancelClick:function() {
-                        $(".selector-mask").hide();
-                        $("#selector").html("");
-                        $("#selector").hide();
+             
 
                     },
                     sunmitClick:function(data) {
-                        $(".selector-mask").hide();
-                        $("#selector").html("");
-                        $("#selector").hide();
+                    
+                  
+                        console.log(data);
                     }
 
                     });
