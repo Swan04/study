@@ -1,0 +1,545 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/Swan/.nvm/versions/node/v5.0.0/bin/node',
+1 verbose cli   '/Users/Swan/.nvm/versions/node/v5.0.0/bin/npm',
+1 verbose cli   'i',
+1 verbose cli   '--save',
+1 verbose cli   'autoprefixer',
+1 verbose cli   'babel',
+1 verbose cli   'babel-loader',
+1 verbose cli   'css-loader',
+1 verbose cli   'json-loader',
+1 verbose cli   'postcss-loader',
+1 verbose cli   'react',
+1 verbose cli   'react-hot-loader',
+1 verbose cli   'style-loader',
+1 verbose cli   'stylus-loader',
+1 verbose cli   'url-loader',
+1 verbose cli   'webpack-dev-server',
+1 verbose cli   'yeticss' ]
+2 info using npm@3.3.6
+3 info using node@v5.0.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData autoprefixer
+8 silly fetchPackageMetaData babel
+9 silly fetchPackageMetaData babel-loader
+10 silly fetchPackageMetaData css-loader
+11 silly fetchPackageMetaData json-loader
+12 silly fetchPackageMetaData postcss-loader
+13 silly fetchPackageMetaData react
+14 silly fetchPackageMetaData react-hot-loader
+15 silly fetchPackageMetaData style-loader
+16 silly fetchPackageMetaData stylus-loader
+17 silly fetchPackageMetaData url-loader
+18 silly fetchPackageMetaData webpack-dev-server
+19 silly fetchPackageMetaData yeticss
+20 silly fetchNamedPackageData autoprefixer
+21 silly mapToRegistry name autoprefixer
+22 silly mapToRegistry using default registry
+23 silly mapToRegistry registry https://registry.npmjs.org/
+24 silly mapToRegistry uri https://registry.npmjs.org/autoprefixer
+25 silly fetchNamedPackageData babel
+26 silly mapToRegistry name babel
+27 silly mapToRegistry using default registry
+28 silly mapToRegistry registry https://registry.npmjs.org/
+29 silly mapToRegistry uri https://registry.npmjs.org/babel
+30 silly fetchNamedPackageData babel-loader
+31 silly mapToRegistry name babel-loader
+32 silly mapToRegistry using default registry
+33 silly mapToRegistry registry https://registry.npmjs.org/
+34 silly mapToRegistry uri https://registry.npmjs.org/babel-loader
+35 silly fetchNamedPackageData css-loader
+36 silly mapToRegistry name css-loader
+37 silly mapToRegistry using default registry
+38 silly mapToRegistry registry https://registry.npmjs.org/
+39 silly mapToRegistry uri https://registry.npmjs.org/css-loader
+40 silly fetchNamedPackageData json-loader
+41 silly mapToRegistry name json-loader
+42 silly mapToRegistry using default registry
+43 silly mapToRegistry registry https://registry.npmjs.org/
+44 silly mapToRegistry uri https://registry.npmjs.org/json-loader
+45 silly fetchNamedPackageData postcss-loader
+46 silly mapToRegistry name postcss-loader
+47 silly mapToRegistry using default registry
+48 silly mapToRegistry registry https://registry.npmjs.org/
+49 silly mapToRegistry uri https://registry.npmjs.org/postcss-loader
+50 silly fetchNamedPackageData react
+51 silly mapToRegistry name react
+52 silly mapToRegistry using default registry
+53 silly mapToRegistry registry https://registry.npmjs.org/
+54 silly mapToRegistry uri https://registry.npmjs.org/react
+55 silly fetchNamedPackageData react-hot-loader
+56 silly mapToRegistry name react-hot-loader
+57 silly mapToRegistry using default registry
+58 silly mapToRegistry registry https://registry.npmjs.org/
+59 silly mapToRegistry uri https://registry.npmjs.org/react-hot-loader
+60 silly fetchNamedPackageData style-loader
+61 silly mapToRegistry name style-loader
+62 silly mapToRegistry using default registry
+63 silly mapToRegistry registry https://registry.npmjs.org/
+64 silly mapToRegistry uri https://registry.npmjs.org/style-loader
+65 silly fetchNamedPackageData stylus-loader
+66 silly mapToRegistry name stylus-loader
+67 silly mapToRegistry using default registry
+68 silly mapToRegistry registry https://registry.npmjs.org/
+69 silly mapToRegistry uri https://registry.npmjs.org/stylus-loader
+70 silly fetchNamedPackageData url-loader
+71 silly mapToRegistry name url-loader
+72 silly mapToRegistry using default registry
+73 silly mapToRegistry registry https://registry.npmjs.org/
+74 silly mapToRegistry uri https://registry.npmjs.org/url-loader
+75 silly fetchNamedPackageData webpack-dev-server
+76 silly mapToRegistry name webpack-dev-server
+77 silly mapToRegistry using default registry
+78 silly mapToRegistry registry https://registry.npmjs.org/
+79 silly mapToRegistry uri https://registry.npmjs.org/webpack-dev-server
+80 silly fetchNamedPackageData yeticss
+81 silly mapToRegistry name yeticss
+82 silly mapToRegistry using default registry
+83 silly mapToRegistry registry https://registry.npmjs.org/
+84 silly mapToRegistry uri https://registry.npmjs.org/yeticss
+85 verbose request uri https://registry.npmjs.org/autoprefixer
+86 verbose request no auth needed
+87 info attempt registry request try #1 at 10:52:24
+88 verbose request id a97bab86ed28aa3b
+89 http request GET https://registry.npmjs.org/autoprefixer
+90 verbose request uri https://registry.npmjs.org/babel
+91 verbose request no auth needed
+92 info attempt registry request try #1 at 10:52:24
+93 http request GET https://registry.npmjs.org/babel
+94 verbose request uri https://registry.npmjs.org/css-loader
+95 verbose request no auth needed
+96 info attempt registry request try #1 at 10:52:24
+97 http request GET https://registry.npmjs.org/css-loader
+98 verbose request uri https://registry.npmjs.org/json-loader
+99 verbose request no auth needed
+100 info attempt registry request try #1 at 10:52:24
+101 http request GET https://registry.npmjs.org/json-loader
+102 verbose request uri https://registry.npmjs.org/postcss-loader
+103 verbose request no auth needed
+104 info attempt registry request try #1 at 10:52:24
+105 http request GET https://registry.npmjs.org/postcss-loader
+106 verbose request uri https://registry.npmjs.org/react-hot-loader
+107 verbose request no auth needed
+108 info attempt registry request try #1 at 10:52:24
+109 http request GET https://registry.npmjs.org/react-hot-loader
+110 verbose request uri https://registry.npmjs.org/stylus-loader
+111 verbose request no auth needed
+112 info attempt registry request try #1 at 10:52:24
+113 http request GET https://registry.npmjs.org/stylus-loader
+114 verbose request uri https://registry.npmjs.org/url-loader
+115 verbose request no auth needed
+116 info attempt registry request try #1 at 10:52:24
+117 http request GET https://registry.npmjs.org/url-loader
+118 verbose request uri https://registry.npmjs.org/yeticss
+119 verbose request no auth needed
+120 info attempt registry request try #1 at 10:52:24
+121 http request GET https://registry.npmjs.org/yeticss
+122 verbose request uri https://registry.npmjs.org/babel-loader
+123 verbose request no auth needed
+124 info attempt registry request try #1 at 10:52:24
+125 verbose etag "DHV7QV1R4YEFPR2PWM6UKBO7A"
+126 http request GET https://registry.npmjs.org/babel-loader
+127 verbose request uri https://registry.npmjs.org/react
+128 verbose request no auth needed
+129 info attempt registry request try #1 at 10:52:24
+130 verbose etag "8ETW0HR6HJY1GOY5ZPBOQZPZV"
+131 http request GET https://registry.npmjs.org/react
+132 verbose request uri https://registry.npmjs.org/style-loader
+133 verbose request no auth needed
+134 info attempt registry request try #1 at 10:52:24
+135 verbose etag "ECKI15HS6YEA3QBWD7V6Z1O0Q"
+136 http request GET https://registry.npmjs.org/style-loader
+137 verbose request uri https://registry.npmjs.org/webpack-dev-server
+138 verbose request no auth needed
+139 info attempt registry request try #1 at 10:52:24
+140 verbose etag "2TMQE3D3LTMQZIFE0Q0DRH33S"
+141 http request GET https://registry.npmjs.org/webpack-dev-server
+142 http 200 https://registry.npmjs.org/yeticss
+143 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+143 verbose headers   etag: '"C899E8GKPU72L2VR3OJDRXS21"',
+143 verbose headers   'content-type': 'application/json',
+143 verbose headers   'cache-control': 'max-age=300',
+143 verbose headers   'content-length': '29082',
+143 verbose headers   'accept-ranges': 'bytes',
+143 verbose headers   date: 'Tue, 15 Mar 2016 02:52:25 GMT',
+143 verbose headers   via: '1.1 varnish',
+143 verbose headers   age: '0',
+143 verbose headers   connection: 'keep-alive',
+143 verbose headers   'x-served-by': 'cache-lcy1133-LCY',
+143 verbose headers   'x-cache': 'MISS',
+143 verbose headers   'x-cache-hits': '0',
+143 verbose headers   'x-timer': 'S1458010344.816131,VS0,VE197',
+143 verbose headers   vary: 'Accept' }
+144 silly get cb [ 200,
+144 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+144 silly get     etag: '"C899E8GKPU72L2VR3OJDRXS21"',
+144 silly get     'content-type': 'application/json',
+144 silly get     'cache-control': 'max-age=300',
+144 silly get     'content-length': '29082',
+144 silly get     'accept-ranges': 'bytes',
+144 silly get     date: 'Tue, 15 Mar 2016 02:52:25 GMT',
+144 silly get     via: '1.1 varnish',
+144 silly get     age: '0',
+144 silly get     connection: 'keep-alive',
+144 silly get     'x-served-by': 'cache-lcy1133-LCY',
+144 silly get     'x-cache': 'MISS',
+144 silly get     'x-cache-hits': '0',
+144 silly get     'x-timer': 'S1458010344.816131,VS0,VE197',
+144 silly get     vary: 'Accept' } ]
+145 verbose get saving yeticss to /Users/Swan/.npm/registry.npmjs.org/yeticss/.cache.json
+146 http 200 https://registry.npmjs.org/css-loader
+147 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+147 verbose headers   etag: '"2013E32EKERJHY4L4M6Z1RBBB"',
+147 verbose headers   'content-type': 'application/json',
+147 verbose headers   'cache-control': 'max-age=300',
+147 verbose headers   'content-length': '81263',
+147 verbose headers   'accept-ranges': 'bytes',
+147 verbose headers   date: 'Tue, 15 Mar 2016 02:52:24 GMT',
+147 verbose headers   via: '1.1 varnish',
+147 verbose headers   age: '0',
+147 verbose headers   connection: 'keep-alive',
+147 verbose headers   'x-served-by': 'cache-lcy1125-LCY',
+147 verbose headers   'x-cache': 'HIT',
+147 verbose headers   'x-cache-hits': '1',
+147 verbose headers   'x-timer': 'S1458010344.770355,VS0,VE102',
+147 verbose headers   vary: 'Accept' }
+148 silly get cb [ 200,
+148 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+148 silly get     etag: '"2013E32EKERJHY4L4M6Z1RBBB"',
+148 silly get     'content-type': 'application/json',
+148 silly get     'cache-control': 'max-age=300',
+148 silly get     'content-length': '81263',
+148 silly get     'accept-ranges': 'bytes',
+148 silly get     date: 'Tue, 15 Mar 2016 02:52:24 GMT',
+148 silly get     via: '1.1 varnish',
+148 silly get     age: '0',
+148 silly get     connection: 'keep-alive',
+148 silly get     'x-served-by': 'cache-lcy1125-LCY',
+148 silly get     'x-cache': 'HIT',
+148 silly get     'x-cache-hits': '1',
+148 silly get     'x-timer': 'S1458010344.770355,VS0,VE102',
+148 silly get     vary: 'Accept' } ]
+149 verbose get saving css-loader to /Users/Swan/.npm/registry.npmjs.org/css-loader/.cache.json
+150 http 200 https://registry.npmjs.org/react
+151 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+151 verbose headers   etag: '"9S3ZC9M8PF49ENHO6W5A4134N"',
+151 verbose headers   'content-type': 'application/json',
+151 verbose headers   'cache-control': 'max-age=300',
+151 verbose headers   'content-length': '82885',
+151 verbose headers   'accept-ranges': 'bytes',
+151 verbose headers   date: 'Tue, 15 Mar 2016 02:52:25 GMT',
+151 verbose headers   via: '1.1 varnish',
+151 verbose headers   age: '273',
+151 verbose headers   connection: 'keep-alive',
+151 verbose headers   'x-served-by': 'cache-lcy1130-LCY',
+151 verbose headers   'x-cache': 'HIT',
+151 verbose headers   'x-cache-hits': '1',
+151 verbose headers   'x-timer': 'S1458010345.134742,VS0,VE0',
+151 verbose headers   vary: 'Accept' }
+152 silly get cb [ 200,
+152 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+152 silly get     etag: '"9S3ZC9M8PF49ENHO6W5A4134N"',
+152 silly get     'content-type': 'application/json',
+152 silly get     'cache-control': 'max-age=300',
+152 silly get     'content-length': '82885',
+152 silly get     'accept-ranges': 'bytes',
+152 silly get     date: 'Tue, 15 Mar 2016 02:52:25 GMT',
+152 silly get     via: '1.1 varnish',
+152 silly get     age: '273',
+152 silly get     connection: 'keep-alive',
+152 silly get     'x-served-by': 'cache-lcy1130-LCY',
+152 silly get     'x-cache': 'HIT',
+152 silly get     'x-cache-hits': '1',
+152 silly get     'x-timer': 'S1458010345.134742,VS0,VE0',
+152 silly get     vary: 'Accept' } ]
+153 verbose get saving react to /Users/Swan/.npm/registry.npmjs.org/react/.cache.json
+154 http 200 https://registry.npmjs.org/babel
+155 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+155 verbose headers   etag: '"ECHCNX6PFM1MBZPMANFK5J2W7"',
+155 verbose headers   'content-type': 'application/json',
+155 verbose headers   'cache-control': 'max-age=300',
+155 verbose headers   'content-length': '241242',
+155 verbose headers   'accept-ranges': 'bytes',
+155 verbose headers   date: 'Tue, 15 Mar 2016 02:52:25 GMT',
+155 verbose headers   via: '1.1 varnish',
+155 verbose headers   age: '281',
+155 verbose headers   connection: 'keep-alive',
+155 verbose headers   'x-served-by': 'cache-lcy1128-LCY',
+155 verbose headers   'x-cache': 'HIT',
+155 verbose headers   'x-cache-hits': '1',
+155 verbose headers   'x-timer': 'S1458010345.098495,VS0,VE1',
+155 verbose headers   vary: 'Accept' }
+156 silly get cb [ 200,
+156 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+156 silly get     etag: '"ECHCNX6PFM1MBZPMANFK5J2W7"',
+156 silly get     'content-type': 'application/json',
+156 silly get     'cache-control': 'max-age=300',
+156 silly get     'content-length': '241242',
+156 silly get     'accept-ranges': 'bytes',
+156 silly get     date: 'Tue, 15 Mar 2016 02:52:25 GMT',
+156 silly get     via: '1.1 varnish',
+156 silly get     age: '281',
+156 silly get     connection: 'keep-alive',
+156 silly get     'x-served-by': 'cache-lcy1128-LCY',
+156 silly get     'x-cache': 'HIT',
+156 silly get     'x-cache-hits': '1',
+156 silly get     'x-timer': 'S1458010345.098495,VS0,VE1',
+156 silly get     vary: 'Accept' } ]
+157 verbose get saving babel to /Users/Swan/.npm/registry.npmjs.org/babel/.cache.json
+158 info retry will retry, error on last attempt: Error: socket hang up
+159 info retry will retry, error on last attempt: Error: socket hang up
+160 info retry will retry, error on last attempt: Error: socket hang up
+161 info retry will retry, error on last attempt: Error: socket hang up
+162 info retry will retry, error on last attempt: Error: socket hang up
+163 info retry will retry, error on last attempt: Error: socket hang up
+164 info retry will retry, error on last attempt: Error: socket hang up
+165 info retry will retry, error on last attempt: Error: socket hang up
+166 info attempt registry request try #2 at 10:53:36
+167 http request GET https://registry.npmjs.org/json-loader
+168 info attempt registry request try #2 at 10:53:36
+169 verbose etag "DHV7QV1R4YEFPR2PWM6UKBO7A"
+170 http request GET https://registry.npmjs.org/babel-loader
+171 info attempt registry request try #2 at 10:53:36
+172 http request GET https://registry.npmjs.org/postcss-loader
+173 info attempt registry request try #2 at 10:53:36
+174 verbose etag "2TMQE3D3LTMQZIFE0Q0DRH33S"
+175 http request GET https://registry.npmjs.org/webpack-dev-server
+176 info attempt registry request try #2 at 10:53:36
+177 http request GET https://registry.npmjs.org/autoprefixer
+178 info attempt registry request try #2 at 10:53:37
+179 http request GET https://registry.npmjs.org/stylus-loader
+180 info attempt registry request try #2 at 10:53:37
+181 http request GET https://registry.npmjs.org/url-loader
+182 http 200 https://registry.npmjs.org/url-loader
+183 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+183 verbose headers   etag: '"2KSFEPYBOCH4JALN3OLEKO9R3"',
+183 verbose headers   'content-type': 'application/json',
+183 verbose headers   'cache-control': 'max-age=300',
+183 verbose headers   'content-length': '11208',
+183 verbose headers   'accept-ranges': 'bytes',
+183 verbose headers   date: 'Tue, 15 Mar 2016 02:53:37 GMT',
+183 verbose headers   via: '1.1 varnish',
+183 verbose headers   age: '66',
+183 verbose headers   connection: 'keep-alive',
+183 verbose headers   'x-served-by': 'cache-lcy1129-LCY',
+183 verbose headers   'x-cache': 'HIT',
+183 verbose headers   'x-cache-hits': '1',
+183 verbose headers   'x-timer': 'S1458010417.492704,VS0,VE0',
+183 verbose headers   vary: 'Accept' }
+184 silly get cb [ 200,
+184 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+184 silly get     etag: '"2KSFEPYBOCH4JALN3OLEKO9R3"',
+184 silly get     'content-type': 'application/json',
+184 silly get     'cache-control': 'max-age=300',
+184 silly get     'content-length': '11208',
+184 silly get     'accept-ranges': 'bytes',
+184 silly get     date: 'Tue, 15 Mar 2016 02:53:37 GMT',
+184 silly get     via: '1.1 varnish',
+184 silly get     age: '66',
+184 silly get     connection: 'keep-alive',
+184 silly get     'x-served-by': 'cache-lcy1129-LCY',
+184 silly get     'x-cache': 'HIT',
+184 silly get     'x-cache-hits': '1',
+184 silly get     'x-timer': 'S1458010417.492704,VS0,VE0',
+184 silly get     vary: 'Accept' } ]
+185 verbose get saving url-loader to /Users/Swan/.npm/registry.npmjs.org/url-loader/.cache.json
+186 info attempt registry request try #2 at 10:53:39
+187 http request GET https://registry.npmjs.org/react-hot-loader
+188 http 304 https://registry.npmjs.org/style-loader
+189 verbose headers { date: 'Tue, 15 Mar 2016 02:53:40 GMT',
+189 verbose headers   via: '1.1 varnish',
+189 verbose headers   'cache-control': 'max-age=300',
+189 verbose headers   etag: '"ECKI15HS6YEA3QBWD7V6Z1O0Q"',
+189 verbose headers   age: '67',
+189 verbose headers   connection: 'keep-alive',
+189 verbose headers   'x-served-by': 'cache-lcy1130-LCY',
+189 verbose headers   'x-cache': 'HIT',
+189 verbose headers   'x-cache-hits': '1',
+189 verbose headers   'x-timer': 'S1458010420.297317,VS0,VE0',
+189 verbose headers   vary: 'Accept' }
+190 silly get cb [ 304,
+190 silly get   { date: 'Tue, 15 Mar 2016 02:53:40 GMT',
+190 silly get     via: '1.1 varnish',
+190 silly get     'cache-control': 'max-age=300',
+190 silly get     etag: '"ECKI15HS6YEA3QBWD7V6Z1O0Q"',
+190 silly get     age: '67',
+190 silly get     connection: 'keep-alive',
+190 silly get     'x-served-by': 'cache-lcy1130-LCY',
+190 silly get     'x-cache': 'HIT',
+190 silly get     'x-cache-hits': '1',
+190 silly get     'x-timer': 'S1458010420.297317,VS0,VE0',
+190 silly get     vary: 'Accept' } ]
+191 verbose etag https://registry.npmjs.org/style-loader from cache
+192 verbose get saving style-loader to /Users/Swan/.npm/registry.npmjs.org/style-loader/.cache.json
+193 http 200 https://registry.npmjs.org/autoprefixer
+194 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+194 verbose headers   etag: '"DCHTTHPSKCW8P6RV9SOL07PD0"',
+194 verbose headers   'content-type': 'application/json',
+194 verbose headers   'cache-control': 'max-age=300',
+194 verbose headers   'content-length': '147491',
+194 verbose headers   'accept-ranges': 'bytes',
+194 verbose headers   date: 'Tue, 15 Mar 2016 02:53:37 GMT',
+194 verbose headers   via: '1.1 varnish',
+194 verbose headers   age: '0',
+194 verbose headers   connection: 'keep-alive',
+194 verbose headers   'x-served-by': 'cache-lcy1126-LCY',
+194 verbose headers   'x-cache': 'HIT',
+194 verbose headers   'x-cache-hits': '1',
+194 verbose headers   'x-timer': 'S1458010417.690376,VS0,VE160',
+194 verbose headers   vary: 'Accept' }
+195 silly get cb [ 200,
+195 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+195 silly get     etag: '"DCHTTHPSKCW8P6RV9SOL07PD0"',
+195 silly get     'content-type': 'application/json',
+195 silly get     'cache-control': 'max-age=300',
+195 silly get     'content-length': '147491',
+195 silly get     'accept-ranges': 'bytes',
+195 silly get     date: 'Tue, 15 Mar 2016 02:53:37 GMT',
+195 silly get     via: '1.1 varnish',
+195 silly get     age: '0',
+195 silly get     connection: 'keep-alive',
+195 silly get     'x-served-by': 'cache-lcy1126-LCY',
+195 silly get     'x-cache': 'HIT',
+195 silly get     'x-cache-hits': '1',
+195 silly get     'x-timer': 'S1458010417.690376,VS0,VE160',
+195 silly get     vary: 'Accept' } ]
+196 verbose get saving autoprefixer to /Users/Swan/.npm/registry.npmjs.org/autoprefixer/.cache.json
+197 info retry will retry, error on last attempt: Error: socket hang up
+198 info retry will retry, error on last attempt: Error: socket hang up
+199 info retry will retry, error on last attempt: Error: socket hang up
+200 info retry will retry, error on last attempt: Error: socket hang up
+201 info retry will retry, error on last attempt: Error: socket hang up
+202 info retry will retry, error on last attempt: Error: socket hang up
+203 info attempt registry request try #3 at 10:55:39
+204 http request GET https://registry.npmjs.org/json-loader
+205 info attempt registry request try #3 at 10:55:39
+206 http request GET https://registry.npmjs.org/postcss-loader
+207 info attempt registry request try #3 at 10:55:40
+208 verbose etag "DHV7QV1R4YEFPR2PWM6UKBO7A"
+209 http request GET https://registry.npmjs.org/babel-loader
+210 info attempt registry request try #3 at 10:55:40
+211 verbose etag "2TMQE3D3LTMQZIFE0Q0DRH33S"
+212 http request GET https://registry.npmjs.org/webpack-dev-server
+213 http 200 https://registry.npmjs.org/json-loader
+214 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+214 verbose headers   etag: '"CYMU70KRSZ14DQFVW8LQ5F8E"',
+214 verbose headers   'content-type': 'application/json',
+214 verbose headers   'cache-control': 'max-age=300',
+214 verbose headers   'content-length': '12363',
+214 verbose headers   'accept-ranges': 'bytes',
+214 verbose headers   date: 'Tue, 15 Mar 2016 02:55:40 GMT',
+214 verbose headers   via: '1.1 varnish',
+214 verbose headers   age: '0',
+214 verbose headers   connection: 'keep-alive',
+214 verbose headers   'x-served-by': 'cache-lcy1120-LCY',
+214 verbose headers   'x-cache': 'HIT',
+214 verbose headers   'x-cache-hits': '1',
+214 verbose headers   'x-timer': 'S1458010539.965255,VS0,VE381',
+214 verbose headers   vary: 'Accept' }
+215 silly get cb [ 200,
+215 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+215 silly get     etag: '"CYMU70KRSZ14DQFVW8LQ5F8E"',
+215 silly get     'content-type': 'application/json',
+215 silly get     'cache-control': 'max-age=300',
+215 silly get     'content-length': '12363',
+215 silly get     'accept-ranges': 'bytes',
+215 silly get     date: 'Tue, 15 Mar 2016 02:55:40 GMT',
+215 silly get     via: '1.1 varnish',
+215 silly get     age: '0',
+215 silly get     connection: 'keep-alive',
+215 silly get     'x-served-by': 'cache-lcy1120-LCY',
+215 silly get     'x-cache': 'HIT',
+215 silly get     'x-cache-hits': '1',
+215 silly get     'x-timer': 'S1458010539.965255,VS0,VE381',
+215 silly get     vary: 'Accept' } ]
+216 verbose get saving json-loader to /Users/Swan/.npm/registry.npmjs.org/json-loader/.cache.json
+217 info attempt registry request try #3 at 10:55:41
+218 http request GET https://registry.npmjs.org/stylus-loader
+219 info attempt registry request try #3 at 10:55:48
+220 http request GET https://registry.npmjs.org/react-hot-loader
+221 http 200 https://registry.npmjs.org/react-hot-loader
+222 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+222 verbose headers   etag: '"11VJAYG7DMAAQZLEVFGEZC8HV"',
+222 verbose headers   'content-type': 'application/json',
+222 verbose headers   'cache-control': 'max-age=300',
+222 verbose headers   'content-length': '75317',
+222 verbose headers   'accept-ranges': 'bytes',
+222 verbose headers   date: 'Tue, 15 Mar 2016 02:55:49 GMT',
+222 verbose headers   via: '1.1 varnish',
+222 verbose headers   age: '0',
+222 verbose headers   connection: 'keep-alive',
+222 verbose headers   'x-served-by': 'cache-lcy1124-LCY',
+222 verbose headers   'x-cache': 'HIT',
+222 verbose headers   'x-cache-hits': '1',
+222 verbose headers   'x-timer': 'S1458010548.675696,VS0,VE641',
+222 verbose headers   vary: 'Accept' }
+223 silly get cb [ 200,
+223 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+223 silly get     etag: '"11VJAYG7DMAAQZLEVFGEZC8HV"',
+223 silly get     'content-type': 'application/json',
+223 silly get     'cache-control': 'max-age=300',
+223 silly get     'content-length': '75317',
+223 silly get     'accept-ranges': 'bytes',
+223 silly get     date: 'Tue, 15 Mar 2016 02:55:49 GMT',
+223 silly get     via: '1.1 varnish',
+223 silly get     age: '0',
+223 silly get     connection: 'keep-alive',
+223 silly get     'x-served-by': 'cache-lcy1124-LCY',
+223 silly get     'x-cache': 'HIT',
+223 silly get     'x-cache-hits': '1',
+223 silly get     'x-timer': 'S1458010548.675696,VS0,VE641',
+223 silly get     vary: 'Accept' } ]
+224 verbose get saving react-hot-loader to /Users/Swan/.npm/registry.npmjs.org/react-hot-loader/.cache.json
+225 silly get cb [ 304, undefined ]
+226 verbose etag https://registry.npmjs.org/babel-loader from cache
+227 verbose get saving babel-loader to /Users/Swan/.npm/registry.npmjs.org/babel-loader/.cache.json
+228 silly get cb [ 304, undefined ]
+229 verbose etag https://registry.npmjs.org/webpack-dev-server from cache
+230 verbose get saving webpack-dev-server to /Users/Swan/.npm/registry.npmjs.org/webpack-dev-server/.cache.json
+231 silly fetchPackageMetaData Error: socket hang up
+231 silly fetchPackageMetaData     at TLSSocket.onHangUp (_tls_wrap.js:1076:19)
+231 silly fetchPackageMetaData     at TLSSocket.g (events.js:260:16)
+231 silly fetchPackageMetaData     at emitNone (events.js:72:20)
+231 silly fetchPackageMetaData     at TLSSocket.emit (events.js:166:7)
+231 silly fetchPackageMetaData     at endReadableNT (_stream_readable.js:905:12)
+231 silly fetchPackageMetaData     at doNTCallback2 (node.js:450:9)
+231 silly fetchPackageMetaData     at process._tickCallback (node.js:364:17)
+231 silly fetchPackageMetaData  error for stylus-loader { [Error: socket hang up] code: 'ECONNRESET' }
+232 silly fetchPackageMetaData Error: socket hang up
+232 silly fetchPackageMetaData     at TLSSocket.onHangUp (_tls_wrap.js:1076:19)
+232 silly fetchPackageMetaData     at TLSSocket.g (events.js:260:16)
+232 silly fetchPackageMetaData     at emitNone (events.js:72:20)
+232 silly fetchPackageMetaData     at TLSSocket.emit (events.js:166:7)
+232 silly fetchPackageMetaData     at endReadableNT (_stream_readable.js:905:12)
+232 silly fetchPackageMetaData     at doNTCallback2 (node.js:450:9)
+232 silly fetchPackageMetaData     at process._tickCallback (node.js:364:17)
+232 silly fetchPackageMetaData  error for postcss-loader { [Error: socket hang up] code: 'ECONNRESET' }
+233 silly rollbackFailedOptional Starting
+234 silly rollbackFailedOptional Finishing
+235 silly runTopLevelLifecycles Starting
+236 silly runTopLevelLifecycles Finishing
+237 silly install printInstalled
+238 verbose stack Error: socket hang up
+238 verbose stack     at TLSSocket.onHangUp (_tls_wrap.js:1076:19)
+238 verbose stack     at TLSSocket.g (events.js:260:16)
+238 verbose stack     at emitNone (events.js:72:20)
+238 verbose stack     at TLSSocket.emit (events.js:166:7)
+238 verbose stack     at endReadableNT (_stream_readable.js:905:12)
+238 verbose stack     at doNTCallback2 (node.js:450:9)
+238 verbose stack     at process._tickCallback (node.js:364:17)
+239 verbose cwd /Users/Swan/Project/study/webFe/webpackes6react
+240 error Darwin 15.2.0
+241 error argv "/Users/Swan/.nvm/versions/node/v5.0.0/bin/node" "/Users/Swan/.nvm/versions/node/v5.0.0/bin/npm" "i" "--save" "autoprefixer" "babel" "babel-loader" "css-loader" "json-loader" "postcss-loader" "react" "react-hot-loader" "style-loader" "stylus-loader" "url-loader" "webpack-dev-server" "yeticss"
+242 error node v5.0.0
+243 error npm  v3.3.6
+244 error code ECONNRESET
+245 error network socket hang up
+245 error network This is most likely not a problem with npm itself
+245 error network and is related to network connectivity.
+245 error network In most cases you are behind a proxy or have bad network settings.
+245 error network
+245 error network If you are behind a proxy, please make sure that the
+245 error network 'proxy' config is set properly.  See: 'npm help config'
+246 verbose exit [ 1, true ]

@@ -1,0 +1,11 @@
+.dragUl {
+	list-style: none;
+}
+.dragUl li {
+	display: inline-block;
+	margin: 30px;
+}
+.dragUl li img {
+	width: 100px;
+	height: 100px;
+}
