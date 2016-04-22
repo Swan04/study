@@ -1,11 +1,12 @@
 {
-  "name": "webpackes6reactredux",
+  "name": "webpackes6react",
   "version": "1.0.0",
-  "description": "webpack+es6+react+redux demo",
+  "description": "webpack+es6+react demo",
   "scripts": {
     "start": "node server.js",
-    "test": "cross-env NODE_ENV=test mocha --recursive --compilers js:babel-register --require ./test/setup.js",
-    "test:watch": "npm test -- --watch"
+    "build:clean": "rm -rf static",
+    "build:webpack": "webpack -p --progress --colors",
+    "build": "cross-env npm run build:clean && npm run build:webpack"
   },
   "license": "MIT",
   "dependencies": {
@@ -14,7 +15,8 @@
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
     "react-redux": "^4.2.1",
-    "redux": "^3.2.1"
+    "redux": "^3.2.1",
+    "serve-index": "^1.7.3"
   },
   "devDependencies": {
     "babel-core": "^6.3.15",
@@ -24,7 +26,6 @@
     "babel-preset-react-hmre": "^1.1.1",
     "babel-register": "^6.3.13",
     "cross-env": "^1.0.7",
-    "expect": "^1.8.0",
     "express": "^4.13.3",
     "jsdom": "^5.6.1",
     "mocha": "^2.2.5",
@@ -32,7 +33,6 @@
     "raw-loader": "^0.5.1",
     "react-addons-test-utils": "^0.14.7",
     "style-loader": "^0.12.3",
-    "todomvc-app-css": "^2.0.1",
     "webpack": "^1.9.11",
     "webpack-dev-middleware": "^1.2.0",
     "webpack-hot-middleware": "^2.9.1"
