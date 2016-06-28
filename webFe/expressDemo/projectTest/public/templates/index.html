@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>商圈绘制工具</title>
+	<link rel="stylesheet" type="text/css" href="../stylesheets/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="../stylesheets/index.css" />
+	<script type="text/javascript" src="../javascripts/jquery-1.12.1.min.js"></script>
+	<script type="text/javascript" src="../javascripts/underscore-min.js"></script>
+</head>
+<body>
+	<div class="containter" id="containter">
+	    <div class="map-nav">
+	    	<ul class="operator-btn">
+	    		<li class="addBC oprator-item" data-type="addCB" data-info="">添加商圈</li><li class="editCB oprator-item" data-type="editCB" data-info="">编辑商圈</li><li class="delCB oprator-item" data-type="delCB" data-info="">删除商圈</li><li class="exportCB oprator-item" data-type="exportCB" data-info="">导出数据</li>
+	    	</ul>
+	    	<h2 class="BC-title">商圈列表</h2>
+	    	<div class="screen-opretor">
+	    		<select class="form-control screen-city" id="screen-city">
+				  <option>城市</option>
+				</select><select class="form-control screen-county" id="screen-county">
+				  <option>行政区县</option>
+				</select><input type="text" class="form-control BC-name" id="BC-name" placeholder="商圈名称"/>
+				<img src="http://p1.qhimg.com/d/inn/b083cfd8/logo.png" data-type="searchBC" class="search-BC oprator-item" />
+	    	</div>
+	    	<table class="table table-bordered BC-lists">
+			</table>
+
+			<ul class="nav-pager">
+		    	<li class='prev-btn oprator-item' data-type="prevPage">上一页</li>
+		    	<li class='next-btn oprator-item' data-type="nextPage">下一页</li>
+		  	</ul>
+
+	    </div>
+	    <div class="map-canvas " id="map-canvas" > 
+	    </div>
+
+	</div>
+	<script type="text/javascript" src="../javascripts/config.js"></script>
+	<script src="http://api.map.so.com/js"></script>
+	<script src="../javascripts/index.js"></script>	
+</body>
+</html>

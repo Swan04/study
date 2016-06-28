@@ -1,7 +1,5 @@
 var path = require('path')
 var webpack = require('webpack')
-var componentsPath = path.resolve(__dirname, 'src/components')
-var pagesPath = path.resolve(__dirname, 'src/pages')
 
 module.exports = {
   devtool: 'cheap-module-eval-source-map',

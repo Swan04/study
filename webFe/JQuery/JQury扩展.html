@@ -1,0 +1,40 @@
+<!Doctype html>
+<head>
+    <title>jquery扩展</title>
+    <script type="text/javascript" src="jquery-1.8.0.js">
+    </script>
+</head>
+    <body>
+        <div class="test" style="width:300px;height:300px;background: #eee;margin:0 auto"></div>
+        <script type="text/javascript">
+            $(function() {
+                extendsJQueryFun();
+                extendsJQueryObj();
+
+                $.love();
+                $('.test').like()
+            });
+
+            function extendsJQueryFun() {
+                $.extend({
+                    love:function(){
+                        console.log('love');
+                    }
+                })
+            }
+            function extendsJQueryObj() {
+                $.fn.like = function(options) {
+                    var settings = $.extend({}, {like: false}, options);
+                    return this.each(function() {
+                          var dts = $(this);
+                          dts.click(onClick);                
+                    });
+                    function onClick() {
+                        console.log(settings.like)
+                    }
+                }
+            }
+
+    </script>
+    </body>
+</html>

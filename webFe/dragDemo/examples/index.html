@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>拖拽</title>
+    <style type="text/css">
+    .containter {
+        position: relative;
+        width: 1000px;
+        height: 500px;
+        margin: 100px auto;
+        background: #6db196;
+    }
+    
+    .dragBox {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100px;
+        height: 100px;
+        background: #1e57d3;
+        cursor: move;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="containter" id="dragArea">
+        <div class="dragBox" id="dragBox"></div>
+    </div>
+    <script type="text/javascript">
+    var dragBoxDom, dragAreaDom, isBoxSelect, dragBoxLeft, dragBoxTop, mouseOffsetX, mouseOffsetY;
+
+    window.onload = function() {
+        dragBoxDom = document.getElementById('dragBox');
+        dragAreaDom = document.getElementById('dragArea');
+        bindEvent();
+    }
+
+    function bindEvent() {
+        dragBoxDom.onmousedown = mouseDownHandler;
+        dragAreaDom.onmousemove = mouseMoveHandler;
+        dragAreaDom.onmouseup = mouseUpHandler;
+    }
+
+    function mouseDownHandler(event) {
+        isBoxSelect = true;
+        dragBoxLeft = dragBoxDom.offsetLeft;
+        dragBoxTop = dragBoxDom.offsetTop;
+        mouseOffsetX = event.offsetX;
+        mouseOffsetY = event.offsetY;
+        console.log(mouseOffsetX, mouseOffsetY)
+        console.log(dragBoxLeft, dragBoxTop)
+    }
+
+    function mouseMoveHandler(event) {
+        if (isBoxSelect) {
+            console.log(event);
+            console.log(event.offsetX,mouseOffsetX)
+            var offsetX = event.offsetX - mouseOffsetX;
+            var offsetY = event.offsetY - mouseOffsetY;
+            //console.log(event);
+            //console.log(offsetX, offsetY)
+            dragBoxDom.style.left = (offsetX) + 'px';
+            dragBoxDom.style.top = (offsetY) + 'px';
+            //console.log(dragBoxDom.style.left,dragBoxDom.style.top)
+
+        }
+
+
+    }
+
+    function mouseUpHandler() {
+        isBoxSelect = false;
+
+    }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+(function(){
+    var config = {
+    	city:[
+    	    {
+            name:'北京市',
+            child:[
+                {
+                	name:'朝阳区',
+                	latlng:''
+                },
+                {
+                	name:'东城区',
+                	latlng:''
+                },
+                {
+                	name:'西城区',
+                	latlng:''
+                },
+                {
+                	name:'海淀区',
+                	latlng:''
+                },
+                {
+                	name:'丰台区',
+                	latlng:''
+                },
+                {
+                	name:'石景山区',
+                	latlng:''
+                },
+                {
+                	name:'门头沟区',
+                	latlng:''
+                },
+                {
+                	name:'通州区',
+                	latlng:''
+                },
+                {
+                	name:'顺义区',
+                	latlng:''
+                },
+                {
+                	name:'房山区',
+                	latlng:''
+                },
+                {
+                	name:'大兴区',
+                	latlng:''
+                },
+                {
+                	name:'昌平区',
+                	latlng:''
+                },
+                {
+                	name:'怀柔区',
+                	latlng:''
+                },
+                {
+                	name:'平谷区',
+                	latlng:''
+                },
+                {
+                	name:'密云区',
+                	latlng:''
+                },
+                {
+                	name:'延庆区',
+                	latlng:''
+                }
+
+            ]
+        }
+
+    	]
+    };
+    window.config = config;
+
+
+
+})()

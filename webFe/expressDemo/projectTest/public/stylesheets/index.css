@@ -1,0 +1,162 @@
+@charset "utf-8";
+    html,body {
+        height: 100%;
+        overflow: hidden;
+    }
+    .containter {
+        width: 1200px;
+        margin: 50px auto 0 auto;
+        font-family: "Mcrosoft Yahei";
+        color:#444;
+    }
+    .containter .map-nav {
+        width: 300px;
+        height: 600px;
+        float: left;
+        padding: 11px;
+        border:1px solid #eee;
+    }
+    .containter .map-canvas {
+        width: 890px;
+        height: 600px;
+        float: right;
+    }
+
+    .containter .map-nav .operator-btn{
+        list-style: none;
+        width:100%;
+        padding: 0;
+        text-align: center;
+    }
+    .containter .map-nav .operator-btn li{
+        width:60px;
+        height:20px;
+        line-height: 20px;
+        display: inline-block;
+        border:1px solid #eee;
+        vertical-align: top;
+        margin:0 4px;
+        cursor: pointer;
+        font-size: 12px;
+    }
+    .containter .map-nav .operator-btn li:hover{
+        background: #2894ff;
+        color:#fff;
+    }
+    .containter .map-nav .operator-btn li.active{
+        background: #2894ff;
+        color:#fff;
+    }
+    .containter .map-nav .BC-title {
+        font-size: 14px;
+        font-weight: normal;
+        margin: 10px 0 0 4px;
+        border-bottom:2px solid #444; 
+        line-height: 20px;
+
+    }
+    .containter  .screen-opretor {
+        margin: 10px 0 0 4px;
+        position: relative;
+    }
+    .containter .screen-city {
+        width:70px;
+        height: 20px;
+        display: inline-block;
+        padding: 0;
+        vertical-align: top;
+    }
+    .containter  .screen-county {
+        width:80px;
+        height: 20px;
+        display: inline-block;
+        padding: 0;
+        vertical-align: top;
+    }
+    .containter  .BC-name {
+        width:115px;
+        height: 22px;
+        display: inline-block;
+        padding-right: 20px;
+        vertical-align: top;
+    }
+    .containter  .search-BC {
+        position: absolute;
+        right: 10px;
+        top:3px;
+        width:15px;
+        height:15px;
+        cursor: pointer;
+    }
+    .containter .save-BC {
+        display: inline-block;
+        height: 23px;
+        padding: 0 10px;
+    }
+    .containter .map-nav .BC-lists {
+        margin:0;
+        margin-left:4px;
+        width:273px;
+        height:400px;
+
+    }
+    .containter .map-nav .BC-lists tr.oprator-item{
+        cursor: pointer;
+    }
+    .containter .map-nav .BC-lists td{
+        height: 20px;
+        padding: 5px;
+        line-height: 1;
+        vertical-align: middle;
+    }
+    .containter .map-nav .BC-lists td:first-child{
+        width:75px;
+    }
+    .containter .map-nav .BC-lists td:last-child{
+        width:115px;
+    }
+    .containter .map-nav .nav-pager {
+        padding:0;
+        margin-top: 10px;
+        list-style: none;
+        text-align: center;
+    }
+    .containter .map-nav .nav-pager li {
+        width:60px;
+        height:20px;
+        line-height: 20px;
+        display: inline-block;
+        vertical-align: top;
+        border:1px solid #eee;
+        margin:0 5px;
+    }
+    .containter .map-nav .nav-pager li:hover {
+        background: #2894ff;
+        color:#fff;
+        cursor: pointer;
+    }
+    .containter .prev-btn  {
+        visibility: hidden;
+    }
+    .containter .screen-opretor-infowindow {
+        margin: 10px 10px 20px 10px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

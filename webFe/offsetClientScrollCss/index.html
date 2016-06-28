@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>offsetClientScrollWidthOrHeight</title>
+    <style type="text/css">
+    .containter {
+        position: relative;
+        width: 1000px;
+        height: 500px;
+        margin: 100px auto;
+        background: #6db196;
+    }
+    
+    .box {
+        float: left;
+        width: 200px;
+        height: 150px;
+        background: #1e57d3;
+        cursor: move;
+        padding:10px;
+        margin:20px;
+        border:5px solid #ddd;
+        overflow: scroll;
+        display: inline-block;
+    }
+    .box-content {
+        width:500px;
+        height:500px;
+    }
+    .btn {
+      margin-top: 20px;
+      float: left;
+    }
+    .boxShow {
+        float: left;
+        font-size: 16px;
+        color: #333;
+        font-family: 'Microsoft Yahei';
+        list-style: none;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="containter">
+        <div class="box" id="box">
+            <div class="box-content"></div>
+        </div>
+        <button class="btn" onclick="showBox()">点我显示数据</button>
+        <ul class="boxShow" id="boxShow">
+            
+        </ul>
+    </div>
+    <script type="text/javascript">
+    
+
+    window.onload = function() {
+        showBox(); 
+    }
+    function showBox() {
+        var clientWidth,clientHeight,offsetWidth,offsetHeight,scrollWidth,scrollHeight,clientTop,clientLeft,offsetTop,offsetLeft,scrollTop,scrollLeft;
+        var boxDom = document.getElementById('box');
+        var boxShowDom = document.getElementById('boxShow');
+
+        clientWidth = boxDom.clientWidth;
+        clientHeight = boxDom.clientHeight;
+        offsetWidth = boxDom.offsetWidth;
+        offsetHeight = boxDom.offsetHeight;
+        scrollWidth = boxDom.scrollWidth;
+        scrollHeight = boxDom.scrollHeight;
+        clientTop = boxDom.clientTop;
+        clientLeft = boxDom.clientLeft;
+        offsetTop = boxDom.offsetTop;
+        offsetLeft = boxDom.offsetLeft;
+        scrollTop = boxDom.scrollTop;
+        scrollLeft = boxDom.scrollLeft;
+       
+        var boxShowHtml = '<li>clientWidth：' + clientWidth + '；clientHeight：'+clientHeight+'</li>'
+                        + '<li>offsetWidth：' + clientWidth + '；offsetHeight：'+clientHeight+'</li>'
+                        + '<li>scrollWidth：' + scrollWidth + '；scrollHeight：'+scrollHeight+'</li>'
+                        + '<li>clientTop：' + clientTop + '；clientLeft：'+clientLeft+'</li>'
+                        + '<li>offsetTop：' + offsetTop + '；offsetLeft：'+offsetLeft+'</li>'
+                        + '<li>scrollTop：' + scrollTop + '；scrollLeft：'+scrollLeft+'</li>';
+        boxShowDom.innerHTML = boxShowHtml;
+    }
+
+    </script>
+</body>
+
+</html>

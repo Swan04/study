@@ -8072,17 +8072,21 @@ jQuery.ajaxTransport( "script", function(s) {
 				if ( s.scriptCharset ) {
 					script.charset = s.scriptCharset;
 				}
+				console.log(1);
 
 				script.src = s.url;
 
+
 				// Attach handlers for all browsers
 				script.onload = script.onreadystatechange = function( _, isAbort ) {
-
+					console.log(JSON.stringify(_));
+					console.log(_);
+					console.log(2);
 					if ( isAbort || !script.readyState || /loaded|complete/.test( script.readyState ) ) {
 
 						// Handle memory leak in IE
 						script.onload = script.onreadystatechange = null;
-
+  
 						// Remove the script
 						if ( head && script.parentNode ) {
 							head.removeChild( script );

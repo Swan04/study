@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+    <script type="text/javascript" src="jquery-1.8.0.js"></script>
+    <script type="text/javascript">
+
+    	  function getJs(sUrl) {
+            var ie = navigator.userAgent.indexOf('MSIE') > 0;
+            var o = ie ? new ActiveXObject('Microsoft.XMLHTTP') : new XMLHttpRequest();
+            o.open('get', sUrl, false);
+            o.send(null);
+            return { body : o.responseText };
+      }
+      var a = getJs('https://new.ucloud.cn/price/price_count?data=eyJxdWFudGl0eSI6MSwiY291bnQiOjEsImNoYXJnZV9pdGVtIjpbeyJwcm9kdWN0X2lkIjoxMDAwMDEsIm11bHRpcGxlIjoxfSx7InByb2R1Y3RfaWQiOjEwMDAwMiwibXVsdGlwbGUiOjEwMjR9LHsicHJvZHVjdF9pZCI6MTExMDAxLCJtdWx0aXBsZSI6MH0seyJwcm9kdWN0X2lkIjoxMDAwMDMsIm11bHRpcGxlIjowfV0sInJlZ2lvbl9pZCI6MTAwMSwiY2hhcmdlX3R5cGUiOjMsInRpbWVzdGFtcCI6MTQ2NjY5ODY1NTAwMH0=').body;
+      alert(a);
+
+    </script>
+	
+</body>
+</html>

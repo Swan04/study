@@ -1,7 +1,7 @@
 # reactjs + webpack + es6 demo
 
 - 项目概况:
-    - 此项目采用reactjs + webpack + es6完成构建和开发
+    - 此项目采用react + webpack + es6完成构建和开发
 
 - 开发环境准备:
     - 最好在OS或者linux平台开发此代码
